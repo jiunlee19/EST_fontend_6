@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>About Me, JiUn</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            div {
+                margin: 40px;
+            }
+            ul {
+                list-style: none;
+            }
+            .inline {
+                display: inline;
+            }
+            #nav-ul {
+                display: flex;
+                justify-content: space-around;
+            }
+            #nav-ul > li {
+                display: inline;
+                padding-top: 10px;
+            }
+            #nav-ul > li > a {
+                text-decoration: none;
+                color: Plum;
+                font-weight: bold;
+                font-size: 50px;
+            }
+            img {
+                width: 25vw;
+                height: 25vw;
+                object-fit: cover;
+            }
+
+            table {
+                /*width: 100%;*/
+                border-collapse: collapse;
+                margin-bottom: 20px;
+            }
+            th,
+            td {
+                border: 1px solid #ddd;
+                padding: 8px;
+                text-align: left;
+            }
+            th {
+                background-color: #f2f2f2;
+            }
+        </style>
+    </head>
+    <body>
+        <nav>
+            <ul id="nav-ul">
+                <li><a href="#birthday">생일</a></li>
+                <li><a href="#location">사는곳</a></li>
+                <li><a href="#mbti">MBTI</a></li>
+                <li><a href="#favorite">좋아하는 것</a></li>
+            </ul>
+        </nav>
+        <hr />
+        <div>
+            <h1>이지언</h1>
+
+            <ul>
+                <!-- <li id="birthday">
+                <h2>🎉 생일</h2>
+                <p>12월 6일</p>
+            </li>
+            <hr />
+            <li>
+                <h2>📍 사는 곳</h2>
+                <p>경기, 성남</p>
+            </li>
+            <hr />
+            <li>
+                <h2>🗣️ MBTI</h2>
+                <p>INTP</p>
+            </li> -->
+                <table>
+                    <thead>
+                        <tr>
+                            <th scope="col">🎉 생일</th>
+                            <th scope="col">📍 사는 곳</th>
+                            <th scope="col">🗣️ MBTI</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Dec 06</td>
+                            <td>성남</td>
+                            <td>INTP</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <hr />
+                <li id="favorite">
+                    <h2>💛 좋아하는 것</h2>
+                    <p>이 세상 귀여운 생명체들을 모두 좋아해요</p>
+                    <!-- <dl class="inline">
+                    <dt class="inline">
+                        <img src="./my-dog.JPG" alt="우리 줄리" />
+                    </dt>
+                    <dd>귀여운 강아지1</dd>
+                    <dt class="inline">
+                        <img
+                            src="https://i.namu.wiki/i/sti2X2Z-WmA2xjh28hNFLtD6LYA1Nvhyb3d6j-OxcjmhIO9ePdrnZU0XSBX_NHVcn8AIvvbRj6xt27MuW5fOrA.webp"
+                            alt="카피바라"
+                        />
+                    </dt>
+                    <dd>카피바라</dd>
+                    <dt class="inline">
+                        <img
+                            src="https://mblogthumb-phinf.pstatic.net/MjAyNTAxMTBfMTIw/MDAxNzM2NDQwMTY3OTcy.ZmnpZ-AH06Drt8h41S_hu-vlzSCgWKsobBiQfVj8aMUg.KcHl6H5YV2b5AZA2mQRWq6K28QmxuaOhxvhm-2e3QJ4g.JPEG/image.JPEG?type=w800"
+                            alt=""
+                        />
+                    </dt>
+                    <dd>귀여운 강아지2</dd>
+                </dl> -->
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>내가 좋아하는 강아지1</th>
+                                <th>내가 좋아하는 강아지2</th>
+                                <th>내가 좋아하는 카피바라</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <img src="./my-dog.JPG" alt="우리 줄리" />
+                                </td>
+                                <td>
+                                    <img
+                                        src="https://mblogthumb-phinf.pstatic.net/MjAyNTAxMTBfMTIw/MDAxNzM2NDQwMTY3OTcy.ZmnpZ-AH06Drt8h41S_hu-vlzSCgWKsobBiQfVj8aMUg.KcHl6H5YV2b5AZA2mQRWq6K28QmxuaOhxvhm-2e3QJ4g.JPEG/image.JPEG?type=w800"
+                                        alt=""
+                                    />
+                                </td>
+                                <td>
+                                    <img
+                                        src="https://i.namu.wiki/i/sti2X2Z-WmA2xjh28hNFLtD6LYA1Nvhyb3d6j-OxcjmhIO9ePdrnZU0XSBX_NHVcn8AIvvbRj6xt27MuW5fOrA.webp"
+                                        alt="카피바라"
+                                    />
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tfoot></tfoot>
+                    </table>
+                </li>
+            </ul>
+        </div>
+    </body>
+</html>

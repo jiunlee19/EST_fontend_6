@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>text와 관련된 태그들</title>
+        <style>
+            .korean {
+                word-break: keep-all;
+            }
+            code {
+                color: blue;
+            }
+            mark{
+                background-color: lightgreen;
+            }
+        </style>
+    </head>
+    <body>
+        <p>
+            프론트엔드 개발 관련 지식들
+            <img src="" alt="" />
+            <input type="text" />
+        </p>
+        <p>프론트엔드 개발 관련 지식들</p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. <br />
+            Necessitatibus nisi minus fuga itaque iure non vitae ipsa cum beatae
+            debitis placeat quaerat, unde nesciunt quo eius soluta repellendus
+            earum. Officia.
+            <br /><br />
+            <!-- 내용이 없는 스타일링용으로 여러번 사용하지 않음 -->
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia
+            iste nemo magni perferendis officia odio blanditiis dolorem ipsam
+            sequi suscipit nisi voluptatum sunt soluta cumque rerum similique,
+            asperiores voluptas autem.
+            <!-- <p></p>  -->
+            <!-- 내용이 없는 스타일링용으로 사용하지 않음 -->
+        </p>
+        <!-- '하나의 문단' 의미, 
+            block 성질(개행),
+            하단에 여백이 생긴다. -->
+
+        <br />
+        <!-- 개행, 
+            여러번 사용하지 말 것,
+            2줄 이상의 개행은 css 이용 -->
+
+        <p>
+            This is a
+            veryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryvery<wbr />longwordthatwillbreakatspecific<wbr />placeswhenthebrowserwindowisresized.
+        </p>
+        <p class="korean">
+            이것은 브라우저창크기가조정될때특정위치에서깨지는
+            매우매우매우매우매우매우매우매우매우매우매우<wbr />매우매우매우매우매우매우매우매우매우매우매우매우매우<wbr />긴단어입니다.
+            후후후후후후후후
+        </p>
+        <!-- 한글의 경우, <wbr>대신 word-break:keep-all;과 함께 사용해야 한다. -->
+        <p>
+            자바스크립트에서 배열에 요소를 추가하려면 push()
+            <code>push()</code>메서드를 사용할 수 있습니다.
+        </p>
+        <!-- code태그 css가 구분되어 보임 -->
+        <pre>
+              /\_/\
+             /• - •\
+            / づ 🌸づ *내 꽃 이쁘지*
+        </pre>
+        <p>안녕&nbsp;위니브&nbsp;안녕&nbsp;오르미6기</p>
+        <!-- &nbsp; 띄어쓰기 -->
+        <p>&copy; copyright</p>
+
+        <p><strong>경고! </strong>이런 행동은 매우 위험합니다!</p>
+        <!-- SEO 측면에서 중요한 내용 들어감 -->
+        <p>경고! <b>이런 행동은 매우 위험합니다!</b></p>
+        <!-- 사용하는걸 권장하지 않음 -->
+
+        <p><em>Garry</em>가 학교에 오지 않았어요!</p>
+
+        <p>
+            그녀는 속으로 <i>학생들이 수업을 열심히 듣고있네</i> 라고
+            생각했습니다.
+        </p>
+        <!-- 스타일링 목적이 아니다. -->
+        <p>
+            그녀는 속으로
+            <q cite="https://snskeyboard.com/asciiart/"
+                >학생들이 수업을 열심히 듣고있네</q
+            >
+            라고 생각했습니다.
+        </p>
+        <!-- cite 속성을 이용해 인용 출처 표시 가능 -->
+
+        <figure>
+            <blockquote>
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Corporis, sint id fuga cum amet perferendis delectus
+                    reiciendis iste eos maxime beatae corrupti possimus!
+                    Numquam, sed? Id illum maxime vero ut.
+                </p>
+            </blockquote>
+            <cite>- 어린왕자 마무리 말 중</cite>
+        </figure>
+        <footer>
+            <address>
+                ABC Corp.<br />
+                123 Main St.<br />
+                Springfield, USA<br />
+                <a href="mailto:contact@abccorp.com">contact@abccorp.com</a
+                ><br />
+                <a href="tel:+1234567890">+1 (234) 567-890</a><br />
+                <a href="https://twitter.com/abccorp">@abccorp</a>
+            </address>
+            <!-- SEO 측면에서 매우 도움이 되는 정보 제공 -->
+        </footer>
+
+        <p>검색결과 <mark>결과 내용</mark></p>
+        </p>
+        <p>본문에서 <a href="#html-def">HTML</a>을 사용합니다.</p>
+        
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis debitis excepturi ullam ducimus officia est voluptatem consectetur ad eaque dolorum, non aspernatur nisi amet repellat voluptas aliquam fugiat saepe accusantium.
+        Fuga sunt natus sint. Est ipsa aperiam praesentium pariatur quod laudantium expedita, harum enim minus beatae sint quisquam molestiae error unde voluptatem. Ad a sapiente tempora quasi vel labore iste!
+        Ipsa, accusantium! Repellendus cum nobis quae facilis temporibus natus iusto, nostrum praesentium voluptate, corrupti fugiat fuga quibusdam doloremque, minus eum eveniet sit quidem assumenda iure autem? Eveniet rerum animi neque.
+        Culpa amet et dicta hic voluptatibus quidem voluptate voluptas sequi molestiae nostrum itaque sed quibusdam, consequatur nisi vitae illo facere quaerat. Quos voluptatum eius omnis sequi reiciendis soluta voluptatem. Enim!
+        Sed voluptatum expedita veritatis iure hic atque non cupiditate repellat vero sit totam voluptate eos, ratione suscipit saepe provident illo esse aut, quia magnam quas nihil. Deleniti accusantium voluptatibus asperiores.
+        Provident vero, quasi praesentium dicta, doloribus ea molestiae fugiat ratione similique a architecto porro nulla eum deleniti autem cum cupiditate facilis illum odio eveniet eligendi minus rerum! Error, quia eligendi.
+        Non suscipit vero esse, enim est ex reprehenderit nemo delectus aliquam atque recusandae nesciunt voluptas saepe voluptatum necessitatibus laborum consequuntur quaerat quos doloribus reiciendis illo! Ex explicabo laborum repudiandae odit.
+        Voluptatibus temporibus accusamus mollitia fugiat, quasi impedit suscipit laudantium ipsum expedita. Dolore blanditiis tempora, suscipit voluptatem, vero maxime quisquam harum eligendi ullam, voluptate sit quas aliquam. Porro facere iste nesciunt?
+        Eaque voluptatibus rem ab corrupti temporibus iste ea provident accusantium, qui, delectus natus ullam consectetur dolorem facere voluptatum impedit numquam! Ex aut nesciunt iusto pariatur voluptatibus blanditiis facilis perspiciatis quisquam?
+        Quo dolor iure cum? In possimus temporibus molestias, vitae deleniti laudantium? Quam facere nam perferendis velit aliquam explicabo ex perspiciatis odio, reprehenderit error est eius voluptatem, voluptates ducimus natus reiciendis?
+        Doloribus consectetur hic consequuntur dicta pariatur qui quo similique expedita minus quos eos possimus voluptatem sint atque, at quibusdam, mollitia illo quaerat nostrum! Explicabo recusandae omnis sed voluptatem minima error?
+        Fugiat ipsum repellendus omnis, laborum aperiam dolore iusto! Ducimus accusamus asperiores enim sapiente consequatur! Accusantium sapiente similique velit odio adipisci facere excepturi magnam, sint natus eius delectus ipsam, nobis vero!
+        Minima ducimus consequatur distinctio. Non esse ullam aliquid numquam, voluptas illo hic explicabo veniam obcaecati alias odio qui libero quisquam, accusamus nostrum sit nemo. Nesciunt quo reiciendis quas beatae tenetur.
+        Cum beatae magnam iste culpa eveniet sunt esse alias necessitatibus, laboriosam veritatis autem dignissimos, porro suscipit. Beatae incidunt a quos voluptatum, sunt pariatur tenetur, libero repudiandae porro excepturi veniam ullam.
+        Beatae quibusdam quasi minus! Fuga omnis saepe perspiciatis temporibus in iure molestias beatae maxime, corrupti soluta quas illo voluptatum expedita et! Aspernatur vitae porro corrupti cum? Asperiores porro iure eos.
+        Illo tenetur in, consequuntur molestias odio esse tempora corporis ducimus minima blanditiis nostrum dolorem nihil voluptatum aspernatur qui, expedita iusto aliquid neque quibusdam. Perferendis, natus non? Eius, obcaecati! Ipsa, necessitatibus.
+        Repudiandae aliquid tenetur quos distinctio placeat qui, obcaecati vitae quod reprehenderit saepe inventore quisquam aspernatur, ratione labore ipsa et voluptate cumque dolorum eius. Dolor quo officia ducimus omnis adipisci iusto!
+        Blanditiis nostrum maxime unde non alias modi quisquam adipisci iste recusandae incidunt, possimus, pariatur aliquid! Sit ducimus saepe beatae cumque quas. Totam et dolor numquam dolores, eligendi incidunt debitis quam!
+        Nemo culpa voluptatem beatae sed praesentium voluptates quia. Amet, laboriosam? Dolorem nesciunt mollitia laborum voluptate labore ipsa ut cumque earum, corrupti dolores nemo, excepturi quia ullam animi fugit, minus soluta!
+        Natus dolorem porro ratione minus quis vel magni, ab delectus ipsa suscipit accusamus veniam iste tempora vitae fugit a. Adipisci quidem eos minima, ratione tempora labore officia obcaecati voluptate at?
+        Placeat repudiandae illum, optio soluta deserunt eaque beatae repellat esse dolorum consequatur, architecto sunt. Aspernatur sed, tenetur vero officiis inventore, laboriosam ipsum possimus eveniet illum repudiandae, voluptatem rem deleniti blanditiis!
+        Labore, molestias accusantium perferendis sint cum aut vitae enim tempore quae dolore praesentium modi quidem doloribus itaque alias iste sed numquam adipisci, libero non reiciendis accusamus a facere! Atque, at!
+        Soluta facilis corrupti sed atque quisquam impedit suscipit, iusto asperiores, natus reprehenderit dolor delectus perferendis magnam fuga sunt amet laborum et reiciendis. Voluptas perspiciatis ab numquam vel quibusdam voluptatibus pariatur?
+        Esse sapiente, accusamus praesentium harum architecto distinctio excepturi vitae odit adipisci libero commodi, laudantium inventore nam. Eos quae, dolorem nesciunt consectetur natus quis alias eaque illum vel consequatur, ut omnis!
+        Minima expedita laboriosam sit rerum sunt ea esse maiores nihil tempora quas unde magni incidunt voluptates optio, dolorum exercitationem labore ut suscipit deserunt beatae odio eaque ex officiis? Praesentium, ex!
+        Incidunt, excepturi quae rerum voluptas accusamus sapiente, maiores culpa natus beatae ipsam quos illo asperiores magnam iste laborum reiciendis consectetur, tenetur soluta optio dolorem. Quo voluptates saepe vero ex sed.
+        Repudiandae dolores blanditiis odio quasi consequuntur minima cum possimus laboriosam, iusto iste animi dignissimos, minus dolorem. Vel, optio ipsa! Obcaecati omnis quo eos? Praesentium possimus a sed! Dolore, molestias dolorum?
+        Praesentium pariatur, atque mollitia earum cumque corporis ea non reprehenderit eligendi optio quos libero, sequi quas, vero velit consectetur excepturi odio. Repudiandae rerum molestiae sapiente eaque voluptas omnis magni eligendi.
+        Voluptatibus sunt a sequi consectetur doloremque voluptate, id architecto tenetur, reiciendis pariatur amet praesentium itaque, similique iusto magni! Vel reprehenderit natus, distinctio similique ab provident magni nam officia velit. Voluptates.
+        Laborum commodi praesentium, iste placeat aut consectetur nostrum, possimus, ex eius ullam repudiandae enim sapiente maiores totam sunt aliquid tempore quam temporibus porro nemo iure quod repellat laudantium. Nesciunt, minima!</p>
+        
+        <p id="html-def"><dfn title="웹 페이지의 구조를 정의하는 마크업 언어">HTML</dfn>은 웹 개발의 기초입니다.</p>
+
+        <p><abbr title="Hyper Text Markup Language">HTML</abbr>은 웹 개발의 기초입니다.</p>
+
+        <!-- dfn, abbr 태그 함께 사용하는 경우 -->
+        <p><dfn id="css-def"><abbr title="Cascading Style Sheets">CSS</abbr></dfn>는 페이지의 표현을 설명하는 스타일 시트 언어입니다.</p>
+    </body>
+</html>

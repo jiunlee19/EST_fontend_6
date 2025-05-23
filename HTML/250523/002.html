@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>목록 관련 태그들</title>
+    </head>
+    <body>
+        <h2>OL - 순서가 있는 목록들</h2>
+        <ol type="a" start="f" reversed>
+            <li>세수</li>
+            <li>샤워</li>
+            <li>아침 먹기</li>
+            <li>주변 정리</li>
+        </ol>
+        브레드크럼 내비게이션
+        <nav>
+            <ol>
+                <li><a href="/">home</a></li>
+                <li><a href="/products">products</a></li>
+                <li><a href="/products/laptop">laptop</a></li>
+                <li>맥북 프로</li>
+            </ol>
+        </nav>
+
+        <h2>UL - 순서가 중요하지 않은 목록들 표시</h2>
+        <ul>
+            <li>로지</li>
+            <li>지지</li>
+            <li>라이캣</li>
+            <li>소울곰</li>
+        </ul>
+        <h2>헤더나 사이드바 메뉴도 이런식으로 만든다</h2>
+        <nav>
+            <ul>
+                <li type="i" value="6"><a href="#home">홈</a></li>
+                <li><a href="#about">소개</a></li>
+                <li><a href="#services">서비스</a></li>
+            </ul>
+        </nav>
+
+        <!-- ol, ul 자식으로 li태그만 지정할 수 있음. li 자식으로는 어떤 태그든 지정 가능. -->
+
+        <dl>
+            <div>
+                <dt>용어</dt>
+                <dd>설명</dd>
+            </div>
+            <div>
+                <dt>해리 포터</dt>
+                <dd>J.K 롤링의 소설 해리포터 시리즈의 주인공이다.</dd>
+                <dd>마법사로서의 모험을 겪는 소년이다.</dd>
+                <dd>이마에 번개 모양의 상처가 있다.</dd>
+                <dd>헤르미온느의 친구이다.</dd>
+            </div>
+        </dl>
+        <dl>
+            <dt>위니브</dt>
+            <dd>제주도에 위치한 ICT 콘텐츠 회사</dd>
+            <dt>설립일</dt>
+            <dd>2000년 0월 0일</dd>
+            <dt>연락처 정보</dt>
+            <dd>
+                <address>
+                    전화번호:000-0000-0000 <br />
+                    주소: 구산로 50
+                </address>
+            </dd>
+        </dl>
+        <!-- 용어와 설명이 쌍이면 사용
+            * 변수값을 넣을 수 없다. 
+            * form태그에 사용 불가 -->
+    </body>
+</html>
