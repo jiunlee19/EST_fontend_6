@@ -30,14 +30,39 @@ body {
     font-family: "GmarketSansMedium";
     font-size: 1.25rem;
 }
-* {
-    /* 전체 속성엔 왠만하면 아무것도 주지 말 것. 최대한 범위 작게 */
+
+/* * {
+    전체 속성엔 왠만하면 아무것도 주지 말 것. 최대한 범위 작게
+} */
+
+.title,
+.intro,
+.explain,
+.input,
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
 }
-section {
+
+.result-button-wrap,
+.more-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.result-wrap,
+.img-wrap {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+
+    text-align: center;
 }
 
 .title {
@@ -65,7 +90,7 @@ section {
     font-size: 17px;
     position: relative;
 }
-.explain > p > span {
+.boldText {
     font-family: "GmarketSansBold";
     font-weight: 700;
 }
@@ -100,4 +125,34 @@ button {
     font-family: "GmarketSansBold";
     font-weight: 700;
     font-size: 1.25rem;
+}
+
+#share {
+    margin-left: 20px;
+    background-color: white;
+}
+
+.bigText {
+    font-size: 4.375rem;
+}
+
+/* 회전 애니메이션 효과 */
+#loading-image {
+    animation: rotate_image 10s linear infinite;
+    transform-origin: 50% 50%;
+}
+
+@keyframes rotate_image {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#result-button {
+    position: relative;
+}
+#click-imge {
+    position: absolute;
+    right: -75px;
+    bottom: -25px;
 }

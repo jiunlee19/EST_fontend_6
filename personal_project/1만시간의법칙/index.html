@@ -35,7 +35,7 @@
                         alt=""
                     />
                     <p>
-                        <span>1만 시간의 법칙</span>은<br />
+                        <span class="boldText">1만 시간의 법칙</span>은<br />
                         어떤 분야의 전문가가 되기 위해서는<br />
                         최소한 1만 시간의 훈련이 필요하다는 법칙이다.
                     </p>
@@ -46,21 +46,67 @@
             <div class="input">
                 <p>
                     나는
-                    <input type="text" placeholder="예)프로그래밍" />
+                    <label for="goal" hidden></label>
+                    <input
+                        type="text"
+                        id="goal"
+                        placeholder="예) 프로그래밍"
+                        required
+                    />
                     전문가가가 될 것이다.
                 </p>
                 <p>
                     그래서 앞으로 매일 하루에
-                    <input type="number" placeholder="예)5시간" /> 시간씩 훈련할
-                    것이다.
+                    <label for="effort" hidden></label>
+                    <input
+                        type="number"
+                        id="everyday-traing-time"
+                        placeholder="예) 5시간"
+                        required
+                    />
+                    시간씩 훈련할 것이다.
                 </p>
             </div>
-            <div class="button">
-                <button>나는 며칠 동안 훈련을 해야 1만 시간이 될까?</button>
-                <img
-                    src="https://paullab.co.kr/images/10000hours/click.png"
-                    alt=""
-                />
+            <div class="result-button-wrap">
+                <button id="result-button">
+                    나는 며칠 동안 훈련을 해야 1만 시간이 될까?
+                </button>
+                <div class="img-wrap">
+                    <img
+                        id="click-image"
+                        src="https://paullab.co.kr/images/10000hours/click.png"
+                        alt=""
+                    />
+                </div>
+            </div>
+            <div class="result-loading" hidden>
+                <div class="img-wrap">
+                    <img
+                        id="loading-image"
+                        src="https://paullab.co.kr/images/10000hours/loading.png"
+                        alt="result-loading"
+                    />
+                </div>
+            </div>
+            <div class="result" hidden>
+                <div class="result-wrap">
+                    <p>
+                        당신은&emsp;
+                        <span id="goal-result" class="boldText bigText"></span>
+                        &emsp;전문가가 되기 위해서
+                        <br />
+                        대략&emsp;
+                        <span
+                            id="days-to-train-result"
+                            class="boldText bigText"
+                        ></span>
+                        &emsp;일 이상 훈련하셔야 합니다! :)
+                    </p>
+                </div>
+                <div class="more-buttons">
+                    <button>훈련하러 가기 GO!GO!</button>
+                    <button id="share">공유하기</button>
+                </div>
             </div>
         </section>
         <section class="model"></section>
@@ -77,4 +123,5 @@
             </footer>
         </section>
     </body>
+    <script src="./index.js"></script>
 </html>
