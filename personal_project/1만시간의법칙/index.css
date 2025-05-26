@@ -1,0 +1,103 @@
+@font-face {
+    font-family: "OTEnjoystoriesBA";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/OTEnjoystoriesBA.woff")
+        format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "GmarketSansBold";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff")
+        format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "GmarketSansMedium";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff")
+        format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background-color: #5b2386;
+    width: 100vw;
+    color: white;
+
+    font-family: "GmarketSansMedium";
+    font-size: 1.25rem;
+}
+* {
+    /* 전체 속성엔 왠만하면 아무것도 주지 말 것. 최대한 범위 작게 */
+}
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.title {
+    position: relative;
+    width: 100%;
+    height: 265px;
+}
+.title img {
+    position: absolute;
+}
+#img-clock {
+    height: 100%;
+}
+#img-title {
+    width: 564px;
+    /* height: 50%; */
+}
+
+.intro-saying {
+    color: #f5df4d;
+    font-family: "OTEnjoystoriesBA";
+    font-size: 2.25rem;
+}
+.explain {
+    font-size: 17px;
+    position: relative;
+}
+.explain > p > span {
+    font-family: "GmarketSansBold";
+    font-weight: 700;
+}
+.explain > img {
+    position: absolute;
+    width: 486px;
+}
+
+.input {
+    font-size: 1.25rem;
+}
+
+input {
+    padding: 15px 20px;
+    margin: 0 15px;
+    border-radius: 10px;
+
+    font-family: "GmarketSansMedium";
+    font-size: 1.25rem;
+
+    white-space: inherit;
+}
+
+button {
+    background-color: #f5df4d;
+    color: #5b2386;
+
+    /* width: 50%; */
+    padding: 10px 40px;
+    border-radius: 30px;
+
+    font-family: "GmarketSansBold";
+    font-weight: 700;
+    font-size: 1.25rem;
+}
