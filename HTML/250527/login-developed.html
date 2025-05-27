@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>위니브 로그인</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                font-size: 20px;
+            }
+            main {
+                width: 100vw;
+                min-height: 100vh;
+
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+            section {
+                width: 100%;
+                max-width: 600px;
+
+                padding: 30px 20px 20px 20px;
+                border: 1px solid lightgray;
+                border-radius: 8px;
+            }
+            header {
+                margin-bottom: 25px;
+            }
+            button {
+                background-color: palevioletred;
+
+                border: none;
+                border-radius: 8px;
+                width: 100%;
+                padding: 10px;
+
+                justify-content: center;
+            }
+            button > img {
+                height: 30px;
+                margin-right: 10px;
+            }
+            button > span {
+                color: white;
+            }
+            nav {
+                width: 100%;
+                margin-top: 25px;
+            }
+
+            nav > ul {
+                list-style: none;
+
+                padding: 0;
+                margin: 0;
+
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+            }
+            nav > ul > li > img {
+                height: 25px;
+                margin-right: 10px;
+                vertical-align: -5px;
+            }
+            nav > ul > li > a,
+            .divider {
+                font-weight: 400;
+                color: lightgray;
+                text-decoration: none;
+                margin-right: 5px;
+            }
+
+            button,
+            #forgot,
+            #forgot > h2,
+            #signup {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                align-items: center;
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <!-- main : 페이지의 주요 콘텐츠 -->
+            <section>
+                <!-- section : 로그인이라는 주제를 가진 콘텐츠를 묶는 영역 -->
+
+                <header>
+                    <!-- header: 로그인 섹션의 도입부 -->
+                    <div>더 편리해진 위니브에 오신 것을 환영합니다.</div>
+                    <!-- div: 시맨틱 의미가 필요 없는 시각 강조 문구 -->
+                </header>
+
+                <button>
+                    <!-- button: 로그인 액션을 수행하는 클릭 가능한 버튼-->
+                    <img src="./src/weniv-logo.png" alt="" />
+                    <!-- img: 시각적 장식용 아이콘으로, 스크린리더가 읽지 않도록 alt 속성은 비움 -->
+                    <span>로그인</span>
+                    <!-- span: 버튼 내부 텍스트로, 시각적으로 구분 -->
+                </button>
+
+                <nav aria-label="계정 관련 링크">
+                    <!-- nav: 관련된 계정 탐색 링크를 그룹화 -->
+                    <!-- aria-label: 스크린리더 사용자에게 이 nav 영역의 의미를 설명 -->
+
+                    <ul>
+                        <!-- ul: 계정 관련 항목들을 리스트로 구조화 -->
+                        <li id="fotgot">
+                            <!-- li: 아이디/비밀번호 찾기 항목을 묶는 리스트 아이템 -->
+                            <img src="./src/icon-lock.png" alt="" />
+                            <!-- img: 장식용 아이콘이며, 접근성을 고려해 alt 속성은 비움 -->
+                            <a href="#">아이디</a>
+                            <!-- a: 아이디 찾기 페이지로 이동하는 링크 -->
+                            <span class="divider" aria-hidden="true">|</span>
+                            <!-- 시각적인 구분자일 뿐이므로 스크린리더가 무시하도록 aria-hidden 사용 -->
+                            <a href="#">비밀번호찾기</a>
+                            <!-- a: 비밀번호 찾기 페이지로 이동하는 링크 -->
+                        </li>
+                        <li id="signup">
+                            <!-- li: 회원가입 항목을 담는 리스트 아이템 -->
+                            <img src="./src/icon-user.png" alt="" />
+                            <!-- img: 장식용 아이콘이며, 접근성을 고려해 alt 속성은 비움 -->
+                            <a href="#">회원가입</a>
+                            <!-- a: 회원가입 페이지로 이동하는 링크 -->
+                        </li>
+                    </ul>
+                </nav>
+            </section>
+        </main>
+
+        <!-- 강사님이 가르쳐주신 시멘틱 개발 -->
+        <main>
+            <section>
+                <h2 class="sr-only">로그인</h2>
+                <p>더 편리해진 위니브에 오신 것을 환영합니다.</p>
+                <a href="#">
+                    <img src="./src/weniv-logo.png" alt="위니브" />
+                    로그인
+                </a>
+                <a href="#">
+                    <img src="./src/icon-lock.png" alt="" />
+                    아이디 | 비밀번호 찾기
+                </a>
+                <a href="#">
+                    <img src="./src/icon-user.png" alt="" />
+                    회원가입
+                </a>
+            </section>
+        </main>
+    </body>
+</html>
