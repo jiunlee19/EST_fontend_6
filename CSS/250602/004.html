@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            /*자손 선택자*/
+            section p {
+                font-size: 32px;
+            }
+            /*자식 선택자, 직계 자식요소만 선택*/
+            section > p {
+                color: cornflowerblue;
+            }
+            /*일반 형제 선택자, 형제 요소 중 뒤에 나오는 요소들 선택*/
+            section ~ p {
+                background-color: lime;
+            }
+
+            section + p {
+                color: coral;
+            }
+        </style>
+    </head>
+    <body>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+        <section>
+            <div>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+        </section>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+    </body>
+</html>

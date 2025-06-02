@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            div :nth-child(1) {
+                color: red;
+            }
+            div > :nth-child(2n) {
+                background: aquamarine;
+            }
+            div :nth-child(odd) {
+                background-color: cornflowerblue;
+            }
+            div :nth-child(2n + 1) {
+                background-color: cornflowerblue;
+            }
+            div p:nth-of-type {
+                background-color: ca;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <p>첫 번째 문단</p>
+            <h2>
+                첫 번째 제목
+                <p>두 번째 문단</p>
+                <p>세 번째 문단</p>
+                <span
+                    >Lorem ipsum dolor, sit amet consectetur adipisicing
+                    elit.</span
+                >
+            </h2>
+        </div>
+    </body>
+</html>

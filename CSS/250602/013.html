@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            :root {
+                --bgc-red: red;
+                --bgc-orange: orange;
+                --bgc-yellow: yellow;
+                --bgc-green: green;
+                --bgc-blue: blue;
+                --bgc-navy: navy;
+                --bgc-purple: purple;
+            }
+            span {
+                padding: 20px;
+                display: inline-block;
+            }
+            div :first-child,
+            div :last-child {
+                border: 10px solid black;
+            }
+            div :nth-child(1) {
+                background-color: var(--bgc-red);
+            }
+            div :nth-child(2) {
+                background-color: var(--bgc-orange);
+            }
+            div :nth-child(3) {
+                background-color: var(--bgc-yellow);
+            }
+            div :nth-child(4) {
+                background-color: var(--bgc-green);
+            }
+            div :nth-child(5) {
+                background-color: var(--bgc-blue);
+            }
+            div :nth-child(6) {
+                background-color: var(--bgc-navy);
+            }
+            div :nth-child(7) {
+                background-color: var(--bgc-purple);
+            }
+            div :nth-child(2n) {
+                color: white;
+            }
+
+            ul :first-child::before {
+                content: "🦊";
+            }
+            ul li:not(:last-child)::after {
+                content: "팀원";
+                font-size: 0.5rem;
+            }
+            ul li ul li::before {
+                content: "💜";
+            }
+            ul :last-child::after {
+                content: "팀장";
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <span>빨강</span>
+            <span>주황</span>
+            <span>노랑</span>
+            <span>초록</span>
+            <span>파랑</span>
+            <span>남색</span>
+            <span>보라</span>
+        </div>
+
+        <ul>
+            <li>지지</li>
+            <li>로지</li>
+            <li>웨이드</li>
+            <li>하티</li>
+            <li>라이캣</li>
+            <li>뮤라</li>
+        </ul>
+    </body>
+</html>
