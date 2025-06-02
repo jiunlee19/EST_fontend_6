@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Video & Audio Tag</title>
+    </head>
+    <body>
+        <!-- <video
+            src="./src/rabbit.MOV"
+            width="300"
+            controls
+            autoplay
+            loop
+            poster="./src/rosy-icon.png"
+        ></video> -->
+        <!-- poster. 브라우저, 인터넷 문제로 동영상을 재생할 수 없을 경우 출력해 보여주는 요소 -->
+        <video
+            src="./src/rabbit.MOV"
+            width="300"
+            controls
+            poster="./src/rosy-icon.png"
+        ></video>
+
+        <video width="300" controls poster="./src/rosy-icon.png" muted>
+            <source src="./src/rabbit.MOV" type="video/mov" />
+            <!-- mov는 safari 전용 확장자라서, 지원하지 않는 확장자면 재생이 되지 않는다. -->
+            <source src="./src/rabbit.MOV" type="video/mp4" />
+        </video>
+
+        <audio src="./src/CatPurr.mp3" controls></audio>
+        <audio src="./src/CatPurr.mp3" controls>
+            <source src="./src/CatPurr.mp3" type="audio/mpeg" />
+        </audio>
+    </body>
+</html>

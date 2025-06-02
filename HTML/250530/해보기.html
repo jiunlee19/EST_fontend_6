@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>form 태그 로그인 모달 완성하기</title>
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+        <style>
+            .sr-only {
+                position: absolute;
+                width: 1px;
+                height: 1px;
+                padding: 0;
+                margin: -1px;
+                overflow: hidden;
+                clip-path: inset(50%);
+                border: 0;
+                clip: rect(0 0 0 0);
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <h2>로그인 또는 회원가입</h2>
+            <dialog open>
+                <form
+                    action="/"
+                    method="post"
+                    enctype="application/x-www-form-urlencoded"
+                >
+                    <fieldset>
+                        <legend>
+                            로그인 또는 회원가입<span class="sr-only"
+                                >모달창</span
+                            >
+                        </legend>
+
+                        <button id="clostBtn">X</button>
+                        <hr />
+                        <p>위니브에서 여러분의 궁금증을 해결하세요! :)</p>
+
+                        <label for="id" class="sr-only">아이디</label>
+                        <input
+                            type="text"
+                            name="id"
+                            id="id"
+                            placeholder="아이디"
+                        />
+                        <br />
+                        <label for="pw" class="sr-only">비밀번호</label>
+                        <input
+                            type="password"
+                            name="pw"
+                            id="pw"
+                            placeholder="비밀번호"
+                        />
+
+                        <br />
+                        <input type="checkbox" name="remember" id="remember" />
+                        <label for="remember">로그인 상태 유지</label>
+
+                        <br />
+                        <input type="submit" value="로그인" />
+                    </fieldset>
+                </form>
+                <a href="#">회원가입</a>
+                <span aria-hidden="true">|</span>
+                <a href="#">아이디/비밀번호 찾기</a><br />
+
+                <hr />
+                <input type="button" value="구글 계정으로 로그인" /><br />
+                <input type="button" value="페이스북 계정으로 로그인" /><br />
+                <input type="button" value="네이버 계정으로 로그인" /><br />
+                <input type="button" value="카카오톡 계정으로 로그인" />
+            </dialog>
+        </main>
+    </body>
+</html>

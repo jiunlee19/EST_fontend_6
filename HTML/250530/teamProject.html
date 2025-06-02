@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>팀 활동</title>
+        <style>
+            .sr-only {
+                position: absolute;
+                width: 1px;
+                height: 1px;
+                padding: 0;
+                margin: -1px;
+                overflow: hidden;
+                clip-path: inset(50%);
+                border: 0;
+                clip: rect(0 0 0 0);
+            }
+        </style>
+    </head>
+    <body>
+        <form action="/" method="get" enctype="multipart/form-data">
+            <!-- action과 method 백엔드 개발자로부터 전달받을 예정이고,
+                multipart/for-data는 파일 첨부를 위해 별도 설정해주었습니다. -->
+            <fieldset>
+                <legend class="sr-only">회원가입</legend>
+
+                <label for="id">아이디</label>
+                <input type="text" id="id" name="id" required />
+                <!-- label-forr값과 input-id값을 일치시킴. -->
+                <label for="password">비밀번호</label>
+                <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    required
+                    placeholder="※ 특수문자 포함 필수"
+                />
+                <!-- label-forr값과 input-id값을 일치시킴. -->
+                <!-- id, 비밀번호 입력이 필수라 required 작성 -->
+                <!-- 비밀번호 입력 칸에 미리 작성돼있는 내용을 placeholder에 작성 -->
+
+                <label for="birthday">생일</label>
+                <br />
+                <input type="date" id="birthday" name="birthday" required />
+                <br />
+                <label for="profile">프로필 이미지 : </label>
+                <br />
+                <input
+                    type="file"
+                    id="profile"
+                    name="profile"
+                    accept="image/png, image/jpeg"
+                />
+                <!-- input type을 입력받을 값의 종류에 맞게 date, file로 각각 설정함. -->
+                <!-- 허용하는 파일 유형 accept 값으로 지정 -->
+
+                <fieldset>
+                    <legend class="sr-only">통신사</legend>
+                    <select name="mobileCarrier" required>
+                        <option value="SKT" selected>SKT</option>
+                        <!-- SKT가 디폴트로 선택돼있어서 checked를 작성 -->
+                        <option value="KT">KT</option>
+                        <option value="etc">알뜰폰</option>
+                        <!-- SKT는 통신사기에, 다른 통신사 선택지들 추가함 -->
+                    </select>
+                </fieldset>
+                <!-- drop-down 형식이기에 위와 같은 형식으로 작성 -->
+
+                <br />
+                <label for="phoneNumber">연락처</label>
+                <input
+                    type="tel"
+                    id="phoneNumber"
+                    name="phoneNumber"
+                    required
+                />
+
+                <fieldset>
+                    <legend>성별</legend>
+                    <input type="radio" name="gender" id="male" value="male" />
+                    <label for="male">남성</label>
+                    <input
+                        type="radio"
+                        name="gender"
+                        id="female"
+                        value="female"
+                    />
+                    <label for="female">여성</label>
+                </fieldset>
+                <!-- 한 가지 값만 선택하는 radio로 작성 -->
+
+                <fieldset>
+                    <legend>사용 기술</legend>
+                    <label for="html">HTML</label>
+                    <input
+                        type="checkbox"
+                        name="language"
+                        id="html"
+                        value="html"
+                    />
+                    <label for="css">CSS</label>
+                    <input
+                        type="checkbox"
+                        name="language"
+                        id="css"
+                        value="css"
+                    />
+                    <label for="JavaScript">JavaScript</label>
+                    <input
+                        type="checkbox"
+                        name="language"
+                        id="JavaScript"
+                        value="JavaScript"
+                    />
+                    <label for="Python">Python</label>
+                    <input
+                        type="checkbox"
+                        name="language"
+                        id="Python"
+                        value="Python"
+                    />
+                    <label for="Django">Django</label>
+                    <input
+                        type="checkbox"
+                        name="language"
+                        id="Django"
+                        value="Django"
+                    />
+                </fieldset>
+                <!-- 동시에 여러가지 값을 선택할 수 있는 checkbox로 작성 -->
+
+                <!-- checkbox의 name 값을 각 값의 이름으로 줄 지, language로 작성할지 고민함.
+            language=html&language=css로 주는게 맞다고 생각하여 같은 이름으로 작성함. -->
+                <!-- name값을 같은 값으로 줄지 다른 값으로 줄지 고민했는데,
+            둘 다 가능하다는 것을 알게 됨.(MDN-input type="checkbox" 참고) -->
+                <!-- 둘의 차이와 활용가능성에 대해 궁금함. -->
+
+                <fieldset>
+                    <legend class="sr-only">사용 브라우저</legend>
+                    <label for="browser">사용하는 브라우저를 선택하세요</label>
+                    <!-- 라벨의 문구가 웹접근성 측면에서 적절하지 않기에, legend를 추가함 -->
+                    <br />
+                    <input
+                        list="browsers"
+                        id="browser"
+                        name="browser"
+                        required
+                    />
+                    <datalist id="browsers">
+                        <option value="explorer"></option>
+                        <option value="chrome"></option>
+                        <option value="microsoft-edge"></option>
+                        <option value="naver-whale"></option>
+                    </datalist>
+                </fieldset>
+
+                <br />
+                <input type="reset" value="초기화" />
+                <input type="submit" value="제출" />
+                <!-- 버튼 기능 별로 적절한 type을 지정함. -->
+            </fieldset>
+        </form>
+    </body>
+</html>

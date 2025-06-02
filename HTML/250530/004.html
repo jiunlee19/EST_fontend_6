@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>다양한 html 태그들</title>
+    </head>
+    <body>
+        <p>
+            디스크 사용량:<meter
+                value="70"
+                min="0"
+                max="100"
+                low="20"
+                high="80"
+            >
+                70%
+                <!-- 내부 컨텐츠는 스크린리더에 적용하기 위해 작성(웹 접근성) -->
+            </meter>
+        </p>
+        <!-- 위 코드는 0부터 100까지의 범위에서 70의 값을 가진 미터를 표시합니다 -->
+
+        <p>
+            배터리 사용량:
+            <meter
+                value="100"
+                min="0"
+                max="100"
+                low="20"
+                high="80"
+                optimum="50"
+            >
+                100%
+            </meter>
+        </p>
+
+        <label for="file">파일 업로드 진행상황: </label>
+        <progress id="file" value="50" max="100">50%</progress>
+
+        <p>데이터 로드 중 ..<progress></progress></p>
+
+        <h2>진행 상황</h2>
+        <progress id="progressBar" value="0" max="100"></progress>
+        <p id="progressText">0%</p>
+        <button onclick="incrementProgress()">진행</button>
+
+        <button id="showDialogBtn">모달 열기</button>
+
+        <dialog id="myDialog">
+            <p>함께해서 즐거웠어요!</p>
+            <button id="closeBtn">닫기</button>
+        </dialog>
+
+        <script>
+            const dialog = document.getElementById("myDialog");
+            const showDialogBtn = document.getElementById("showDialogBtn");
+            const closeBtn = document.getElementById("closeBtn");
+
+            showDialogBtn.addEventListener("click", () => {
+                dialog.showModal();
+                console.log("FE 짱짱");
+            });
+
+            closeBtn.addEventListener("click", () => {
+                dialog.close();
+            });
+        </script>
+
+        <script>
+            function incrementProgress() {
+                var progressBar = document.getElementById("progressBar");
+                var progressText = document.getElementById("progressText");
+
+                if (progressBar.value < 100) {
+                    progressBar.value += 10;
+                    progressText.textContent = progressBar.value + "%";
+                }
+
+                if (progressBar.value >= 100) {
+                    alert("완료!");
+                }
+            }
+        </script>
+    </body>
+</html>
