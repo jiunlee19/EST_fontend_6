@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            /*절대단위, 이미지를 표현하는 가장 작은 단위*/
+            .px {
+                width: 500px;
+                background-color: lightblue;
+            }
+            /*상대단위, 부모 요소의 해당 속성값을 기준*/
+            .percent {
+                width: 50%;
+                background-color: lightpink;
+            }
+            /*브라우저 화면 너비 기준 비율*/
+            .vw {
+                width: 50vw;
+                background-color: lightgreen;
+            }
+            /*브라우저 화면 높이 기준 비율 */
+            .vh {
+                height: 50vh;
+                background-color: lightgoldenrodyellow;
+            }
+            /*(너비와 높이 중)더 작은 값 기준으로 50%*/
+            .vmin {
+                width: 50vmin;
+                background-color: lightgray;
+            }
+            /*(너비와 높이 중)더 큰 값 기준으로 50%*/
+            .vmax {
+                width: 50vmax;
+                background-color: lightsalmon;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="px">
+            <strong>div width: 500px;</strong><br />Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Obcaecati esse tempora corporis quia
+            aperiam! Labore impedit voluptas placeat, beatae quod iure,
+            perspiciatis odit dicta optio reiciendis eius doloremque aliquam ad.
+
+            <div class="percent">
+                <strong>div width: 50%;</strong><br />Lorem ipsum dolor sit amet
+                consectetur adipisicing elit. Obcaecati esse tempora corporis
+                quia aperiam! Labore impedit voluptas placeat, beatae quod iure,
+                perspiciatis odit dicta optio reiciendis eius doloremque aliquam
+                ad.
+            </div>
+        </div>
+        <div class="vw">
+            <strong>div width: 50vw;</strong><br />Lorem ipsum, dolor sit amet
+            consectetur adipisicing elit. Dolorum sunt fugit assumenda, odit rem
+            ea dignissimos sit quasi voluptatem velit adipisci doloremque earum
+            saepe, ullam, alias voluptas at quis. Cupiditate.
+        </div>
+        <div class="vh">
+            <strong>div height: 50vh;</strong><br />Lorem ipsum, dolor sit amet
+            consectetur adipisicing elit. Dolorum sunt fugit assumenda, odit rem
+            ea dignissimos sit quasi voluptatem velit adipisci doloremque earum
+            saepe, ullam, alias voluptas at quis. Cupiditate.
+        </div>
+        <div class="vmin">
+            <strong>div width: 50vmin;</strong><br />Lorem ipsum, dolor sit amet
+            consectetur adipisicing elit. Dolorum sunt fugit assumenda, odit rem
+            ea dignissimos sit quasi voluptatem velit adipisci doloremque earum
+            saepe, ullam, alias voluptas at quis. Cupiditate.
+        </div>
+        <div class="vmax">
+            <strong>div width: 50vmax;</strong><br />Lorem ipsum, dolor sit amet
+            consectetur adipisicing elit. Dolorum sunt fugit assumenda, odit rem
+            ea dignissimos sit quasi voluptatem velit adipisci doloremque earum
+            saepe, ullam, alias voluptas at quis. Cupiditate.
+        </div>
+    </body>
+</html>
