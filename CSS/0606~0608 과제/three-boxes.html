@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>3 boxes</title>
+        <style>
+            .container > * {
+                display: inline-block;
+            }
+            [class*="box"] {
+                font-size: 12px;
+                text-align: center;
+                line-height: 32px;
+
+                width: 88px;
+                height: 32px;
+            }
+            .emoji::after {
+                content: "👋";
+            }
+            .box1 {
+                color: white;
+
+                background-color: gray;
+                border: 4px solid black;
+
+                box-shadow: 5px 5px #a5a5a5 inset;
+            }
+            .box2 {
+                color: white;
+
+                background: linear-gradient(
+                    90deg,
+                    rgba(123, 80, 237, 1) 0%,
+                    rgba(67, 108, 234, 1) 100%
+                );
+                background-clip: padding-box;
+
+                border: 4px dashed lightgray;
+                border-radius: 50px;
+            }
+            .box3 {
+                border: solid 2px lightblue;
+                border-radius: 0 50px 50px 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="box1 emoji">Hello</div>
+            <div class="box2 emoji">Hello</div>
+            <div class="box3 emoji">Hello</div>
+        </div>
+    </body>
+</html>
