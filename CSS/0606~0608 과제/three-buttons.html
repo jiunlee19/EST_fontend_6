@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>3버튼 여러상태</title>
+        <style>
+            :root {
+                --bgc-red: #eb5757;
+                --bgc-blue: #439aff;
+                --bgc-darkgray: #343f50;
+                --bgc-gray: #4a5568;
+                --bgc-lightgray: #cbd5df;
+                --bgc-white: #fff;
+            }
+            button {
+                font-weight: 700;
+                font-size: 12px;
+
+                width: 88px;
+                height: 32px;
+
+                background-color: var(--bgc-darkgray);
+                border: 1px #1a202c;
+                box-shadow: 2px 2px 0px 0px #ffffff33 inset;
+            }
+            .normal {
+                color: var(--bgc-lightgray);
+            }
+
+            .positive {
+                color: var(--bgc-blue);
+            }
+            .negative {
+                color: var(--bgc-red);
+            }
+
+            .common-hover-active:hover,
+            .common-hover-active:active {
+                color: var(--bgc-white);
+                text-decoration: underline;
+            }
+
+            .common-active-disabled:active,
+            .common-active-disabled:disabled {
+                box-shadow: 2px 2px 0px 0px #00000033 inset;
+            }
+
+            .positive:hover,
+            .positive:active {
+                background-color: var(--bgc-blue);
+            }
+            .negative:hover,
+            .negative:active {
+                background-color: var(--bgc-red);
+            }
+            .normal:disabled {
+                color: var(--bgc-gray);
+            }
+        </style>
+    </head>
+    <body>
+        <button class="normal common-hover-active common-active-disabled">
+            Button
+        </button>
+        <button class="positive common-hover-active common-active-disabled">
+            Yes
+        </button>
+        <button class="negative common-hover-active common-active-disabled">
+            Del
+        </button>
+    </body>
+</html>
