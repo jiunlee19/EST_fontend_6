@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            @font-face {
+                font-family: "DungGeunMo";
+                src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff")
+                    format("woff");
+                font-weight: normal;
+                font-style: normal;
+            }
+
+            body {
+                background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0k-KdCCFHkPJswViphETUTtV9ZrWv2wdk_w&s);
+            }
+            p {
+                font-family: "DungGeunMo", sans-serif;
+                text-align: center;
+                margin: 3.5rem;
+            }
+
+            #background {
+                background-color: lightpink;
+
+                width: 300px;
+                height: 9rem;
+
+                border: 1px solid gray;
+                border-radius: 30px;
+            }
+
+            #background:hover {
+                background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSl6yPik02W1f7muVQJAThEwRF3kb_jyviuGbKV3VhsvzECSMvI9bQjC2ZQBgCsDfAF1qg&usqp=CAU");
+
+                text-decoration-color: red;
+                text-decoration-line: underline;
+                text-decoration-style: wavy;
+
+                box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            }
+            #background:hover {
+                #answer {
+                    display: block;
+                    color: #fff;
+                    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #0073e6,
+                        0 0 20px #0073e6, 0 0 25px #0073e6;
+                }
+                #answer > p {
+                    background-color: white;
+                }
+                #question {
+                    display: none;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div id="background">
+            <section id="question">
+                <p>도대체 뭘 원하는 거야?</p>
+            </section>
+            <section id="answer" hidden>
+                <p>"퇴근!"</p>
+            </section>
+        </div>
+    </body>
+</html>

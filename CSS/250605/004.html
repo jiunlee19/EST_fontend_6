@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            .parent {
+                width: 200px;
+                background-color: gray;
+                margin-top: 100px;
+                /*overflow:auto;*/
+                /*display:inline-block;*/
+                /*border: solid 1px black;*/
+                /*padding: 10px;*/
+                /*display: flow-root;*/
+            }
+            .child {
+                width: 100px;
+                height: 100px;
+                background-color: lightcoral;
+                /*margin-top: 50px;*/
+            }
+            .A {
+                margin-top: 100px;
+                width: 100px;
+                height: 300px;
+                background-color: lightgray;
+            }
+            .B,
+            .C {
+                width: 100px;
+                height: 100px;
+                background-color: lightcoral;
+            }
+            .B {
+                margin-bottom: 100px;
+            }
+            .C {
+                margin-top: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="parent">
+            <div class="child"></div>
+        </div>
+        <div class="A">
+            <div class="B"></div>
+            <div class="C"></div>
+        </div>
+    </body>
+</html>

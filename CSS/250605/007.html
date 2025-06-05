@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            div {
+                width: 100px;
+                height: 100px;
+                display: inline-block;
+
+                border: dashed gray;
+            }
+            .box1,
+            .box2,
+            .box3,
+            .box4,
+            .box5,
+            .box6 {
+                background-color: blueviolet;
+                opacity: 50%;
+            }
+            .box1 {
+                border-radius: 50%;
+            }
+            .box2 {
+                border-radius: 10px;
+            }
+            .box3 {
+                border-radius: 100% 0 0 0;
+            }
+            .box4 {
+                border-radius: 100% 0;
+            }
+            .box5 {
+                border-radius: 0 50%;
+            }
+            .box6 {
+                border-radius: 100px 100px 0 0;
+                box-sizing: border-box;
+                height: 50px;
+                margin-bottom: 52px;
+            }
+        </style>
+    </head>
+    <body>
+        <div><div class="box1"></div></div>
+        <div><div class="box2"></div></div>
+        <div><div class="box3"></div></div>
+        <div><div class="box4"></div></div>
+        <div><div class="box5"></div></div>
+        <div><div class="box6"></div></div>
+    </body>
+</html>

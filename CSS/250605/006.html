@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            div {
+                width: 200px;
+                height: 100px;
+                border: 1px solid red;
+                margin-bottom: 100px;
+            }
+            .box1 {
+                overflow: hidden;
+            }
+            .box2 {
+                overflow: visible;
+            }
+            .box3 {
+                overflow: scroll;
+            }
+            .scroll-erase {
+                overflow-y: hidden;
+            }
+            .box4 {
+                overflow: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <strong>overflow:hidden</strong>
+        <div class="box1">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
+            reiciendis, natus sunt pariatur aliquam iure rem enim eligendi,
+            numquam neque tempora, quas architecto. Incidunt voluptas quasi
+            ratione sit recusandae commodi.
+        </div>
+        <strong>overflow:visible</strong>
+        <div class="box2">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
+            reiciendis, natus sunt pariatur aliquam iure rem enim eligendi,
+            numquam neque tempora, quas architecto. Incidunt voluptas quasi
+            ratione sit recusandae commodi.
+        </div>
+        <strong>overflow:scroll</strong>
+        <div class="box3">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </div>
+        <div class="box3 scroll-erase">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi
+            adipisci amet nobis quod iure voluptate, atque numquam sunt at aut
+            animi magnam soluta enim, nihil beatae eos iste vel quae?
+        </div>
+        <strong>overflow:auto</strong>
+        <div class="box4">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </div>
+        <div class="box4">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
+            praesentium obcaecati blanditiis rem porro consectetur soluta
+            corporis, dolores, ab aliquid accusantium sunt odio ullam alias.
+            Optio asperiores culpa enim alias.
+        </div>
+    </body>
+</html>
