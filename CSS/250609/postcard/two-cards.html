@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>실습2</title>
+        <link rel="stylesheet" href="./reset.css" />
+
+        <style>
+            @font-face {
+                font-family: "Pretendard-Regular";
+                src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+                    format("woff");
+                font-weight: 400;
+                font-style: normal;
+            }
+            * {
+                font-family: pretendard;
+            }
+            body {
+                background-color: #f5f5f5;
+            }
+            .card1,
+            .card2 {
+                display: inline-block;
+            }
+            /*card1 css*/
+            .card1 {
+                background-color: white;
+                border-radius: 8px;
+                width: 288px;
+
+                box-shadow: 2px 2px 8px 0px #0000001a;
+                position: relative;
+                margin-left: 63px;
+                margin-top: 46px;
+                overflow: hidden;
+            }
+            .card1 img {
+                width: 100%;
+                height: 196px;
+                object-fit: cover;
+            }
+            .card1-postcard {
+                margin: 20px 16px 16px 16px;
+                /*height: 116px;*/
+            }
+            .card1 h2 {
+                font-size: 1rem;
+                font-weight: bold;
+                margin: 0;
+                color: #29363d;
+            }
+            .card1 p {
+                margin: 16px 0;
+                font-size: 0.75rem;
+                color: #5a6a72;
+                overflow: hidden;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 2;
+                line-height: 160%;
+            }
+            .card1 a {
+                margin-left: 6px;
+                font-weight: bold;
+                text-decoration: underline;
+                font-size: 0.875rem;
+                line-height: 100%;
+                color: #29363d;
+            }
+
+            /*card2 css*/
+            .card2 {
+                width: 288px;
+                /*height: 374px;*/
+                background-color: white;
+                box-shadow: 2px 2px 8px 0px #0000001a;
+                border-radius: 8px;
+
+                position: relative;
+
+                margin-top: 46px;
+                margin-left: 27px;
+            }
+            .card2 header {
+                padding: 16px 0;
+                width: 256px;
+                height: 40px;
+                margin: auto;
+            }
+
+            .card2 header img {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                float: left;
+                margin-right: 16px;
+            }
+            .card2 header h2 {
+                font-size: 16px;
+                font-weight: 700;
+            }
+
+            .card2 header p {
+                font-size: 12px;
+                font-weight: 400;
+            }
+            .card2 main img {
+                width: 100%;
+                object-fit: cover;
+
+                left: 0;
+                margin-top: 12px;
+            }
+            .card2 footer {
+                position: relative;
+
+                padding: 16px;
+                margin-bottom: 16px;
+            }
+            .card2 footer p {
+                font-size: 12px;
+
+                display: -webkit-box;
+                overflow: hidden;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 2;
+                line-height: 160%;
+            }
+            .card2 .link {
+                height: 32px;
+                margin-top: 12px;
+                align-items: center;
+                color: #29363d;
+            }
+            .card2 .link > a {
+                font-size: 14px;
+                font-weight: bold;
+                text-decoration: underline;
+                margin-left: 6px;
+                margin-right: 20px;
+                line-height: 100%;
+            }
+            .card2 .link span {
+                height: 6px;
+            }
+            .card2 .icon {
+                float: right;
+            }
+            .card2 .icon a img {
+                margin-left: 8px;
+                width: 32px;
+                height: 32px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="card1">
+            <img src="./img/thumbnail.png" alt="image" />
+            <div class="card1-postcard">
+                <h2>그것을 피가 청춘을 것이다</h2>
+                <p>
+                    청춘의 하였으며, 이것은 몸이 때문이다. 사는가 고동을 용기가
+                    충분히 청춘 것이다. 얼마나 반짝이는 소담스...운 열락의
+                    아름다우냐? 가지에 같지 청춘의 옷을 목숨을 피어나기 오직
+                    군영과 칼이다. 거친 끓는 예가 뿐이다. 방지하는 꽃이 청춘을
+                    생명을 이것이다. 인간의 거선의 피고, 모래뿐일 작고 우리
+                    평화스러운 있는가?
+                </p>
+                <a href=" ">Read</a>
+            </div>
+        </div>
+
+        <div class="card2">
+            <header>
+                <img src="./img/profile.png" alt="프로필 이미지" />
+                <h2>그것을 피가 청춘을 것이다</h2>
+                <p>secondary</p>
+            </header>
+            <main>
+                <img src="./img/thumbnail.png" alt="썸네일 이미지" />
+            </main>
+            <footer>
+                <p>
+                    청춘의 하였으며, 이것은 몸이 때문이다. 사는가 고동을 용기가
+                    충분히 청춘 것이다. 얼마나 반짝이는 소담스...운 열락의
+                    아름다우냐? 가지에 같지 청춘의 옷을 목숨을 피어나기 오직
+                    군영과 칼이다. 거친 끓는 예가 뿐이다. 방지하는 꽃이 청춘을
+                    생명을 이것이다. 인간의 거선의 피고, 모래뿐일 작고 우리
+                    평화스러운 있는가?
+                </p>
+                <div class="link">
+                    <a href="#">Read</a>
+                    <span aria-hidden="true">
+                        <img src="./img/Vector 7.png" alt="" />
+                    </span>
+                    <div class="icon">
+                        <a href=""><img src="./img/icon-heart.png" alt="" /></a>
+                        <a href=""><img src="./img/icon-share.png" alt="" /></a>
+                        <a href=""><img src="./img/icon-more.png" alt="" /></a>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="./reset.css" />
+        <style>
+            @font-face {
+                font-family: "Pretendard-Regular";
+                src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+                    format("woff");
+                font-weight: 400;
+                font-style: normal;
+            }
+            body {
+                font-family: "pretendard";
+                background-color: #f5f5f5;
+                color: #5a6a72;
+            }
+            .card2 {
+                width: 288px;
+                /*height: 374px;*/
+                background-color: white;
+                box-shadow: 2px 2px 8px 0px #0000001a;
+                border-radius: 8px;
+
+                position: relative;
+                margin: 20px 30px;
+            }
+            header {
+                padding: 16px 0;
+                width: 256px;
+                height: 40px;
+                margin: auto;
+            }
+
+            header img {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                float: left;
+                margin-right: 16px;
+            }
+            header h2 {
+                font-size: 16px;
+                font-weight: 700;
+            }
+
+            header p {
+                font-size: 12px;
+                font-weight: 400;
+            }
+            main img {
+                width: 100%;
+                object-fit: cover;
+
+                left: 0;
+                margin-top: 12px;
+            }
+            footer {
+                position: relative;
+
+                padding: 16px;
+                margin-bottom: 16px;
+            }
+            footer p {
+                font-size: 12px;
+
+                display: -webkit-box;
+                overflow: hidden;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 2;
+                line-height: 160%;
+            }
+            .link {
+                height: 32px;
+                margin-top: 12px;
+                align-items: center;
+                color: #29363d;
+            }
+            .link > a {
+                font-size: 14px;
+                font-weight: bold;
+                text-decoration: underline;
+                margin-left: 6px;
+                margin-right: 20px;
+                line-height: 100%;
+            }
+            .link span {
+                height: 6px;
+            }
+            .icon {
+                float: right;
+            }
+            .icon a img {
+                margin-left: 8px;
+                width: 32px;
+                height: 32px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="card2">
+            <header>
+                <img src="./img/profile.png" alt="프로필 이미지" />
+                <h2>그것을 피가 청춘을 것이다</h2>
+                <p>secondary</p>
+            </header>
+            <main>
+                <img src="./img/thumbnail.png" alt="썸네일 이미지" />
+            </main>
+            <footer>
+                <p>
+                    청춘의 하였으며, 이것은 몸이 때문이다. 사는가 고동을 용기가
+                    충분히 청춘 것이다. 얼마나 반짝이는 소담스...운 열락의
+                    아름다우냐? 가지에 같지 청춘의 옷을 목숨을 피어나기 오직
+                    군영과 칼이다. 거친 끓는 예가 뿐이다. 방지하는 꽃이 청춘을
+                    생명을 이것이다. 인간의 거선의 피고, 모래뿐일 작고 우리
+                    평화스러운 있는가?
+                </p>
+                <div class="link">
+                    <a href="#">Read</a
+                    ><span aria-label="divider" aria-hidden="true"
+                        ><img src="./img/Vector 7.png" alt=""
+                    /></span>
+                    <div class="icon">
+                        <a href=""><img src="./img/icon-heart.png" alt="" /></a>
+                        <a href=""><img src="./img/icon-share.png" alt="" /></a>
+                        <a href=""><img src="./img/icon-more.png" alt="" /></a>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>

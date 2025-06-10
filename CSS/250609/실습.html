@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Display 실습</title>
+        <style>
+            .box1 > img {
+                width: 200px;
+                aspect-ratio: 1/1;
+
+                object-fit: cover;
+            }
+
+            .box2 > img {
+                width: 200px;
+                aspect-ratio: 2/1;
+                object-fit: cover;
+            }
+            .box3 > div,
+            .box4 > div {
+                display: inline-block;
+            }
+            .box3 > div {
+                position: relative;
+                width: 30%;
+                height: 0;
+                padding-top: 30%;
+            }
+            .box4 > div {
+                position: relative;
+                width: 30%;
+                height: 0;
+                padding-top: 15%;
+            }
+            .box3 > div > img,
+            .box4 > div > img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>aspect-ratio</h2>
+        <div class="box1">
+            <img src="./img/weniv-binky.png" alt="" />
+            <img src="./img/weniv-chilli.png" alt="" />
+            <img src="./img/weniv-garry.png" alt="" />
+            <br />
+            <img src="./img/weniv-licat.png" alt="" />
+            <img src="./img/weniv-suri.png" alt="" />
+            <img src="./img/weniv-wade.png" alt="" />
+        </div>
+        <div class="box2">
+            <img src="./img/weniv-binky.png" alt="" />
+            <img src="./img/weniv-chilli.png" alt="" />
+            <img src="./img/weniv-garry.png" alt="" />
+            <br />
+            <img src="./img/weniv-licat.png" alt="" />
+            <img src="./img/weniv-suri.png" alt="" />
+            <img src="./img/weniv-wade.png" alt="" />
+        </div>
+        <h2>padding-top</h2>
+        <div class="box3">
+            <div><img src="./img/weniv-binky.png" alt="" /></div>
+            <div><img src="./img/weniv-chilli.png" alt="" /></div>
+            <div><img src="./img/weniv-garry.png" alt="" /></div>
+
+            <br />
+
+            <div><img src="./img/weniv-licat.png" alt="" /></div>
+            <div><img src="./img/weniv-suri.png" alt="" /></div>
+            <div><img src="./img/weniv-wade.png" alt="" /></div>
+        </div>
+        <div class="box4">
+            <div><img src="./img/weniv-binky.png" alt="" /></div>
+            <div><img src="./img/weniv-chilli.png" alt="" /></div>
+            <div><img src="./img/weniv-garry.png" alt="" /></div>
+            <br />
+            <div><img src="./img/weniv-licat.png" alt="" /></div>
+            <div><img src="./img/weniv-suri.png" alt="" /></div>
+            <div><img src="./img/weniv-wade.png" alt="" /></div>
+        </div>
+    </body>
+</html>
