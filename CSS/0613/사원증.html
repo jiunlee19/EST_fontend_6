@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>사원증</title>
+        <link rel="stylesheet" href="./reset.css" />
+        <style>
+            .container {
+                perspective: 1000px;
+                display: flex;
+                justify-content: center;
+                margin-top: 30vh;
+            }
+            .id-card {
+                width: 200px;
+                height: 300px;
+                transition: all 2s;
+                transform-style: preserve-3d;
+                position: relative;
+                border-radius: 8px;
+                box-shadow: 4px 4px 4px 4px gray;
+
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+            .id-card::before,
+            .id-card::after {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                backface-visibility: hidden;
+            }
+            .id-card::before {
+                content: "분실 시 인사팀에 즉시 연락해주세요.";
+                text-align: center;
+                font-size: 0.6rem;
+                height: 100%;
+                margin: auto 0;
+                color: white;
+                background-color: #0064ff;
+                transform: rotateY(180deg);
+                border-radius: 8px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .id-card::after {
+                content: "";
+                border-radius: 8px;
+            }
+            .id-card:hover {
+                transform: rotateY(540deg) scale(1.3);
+            }
+            .logo {
+                width: 50px;
+                aspect-ratio: 1080/739;
+                background: url("https://framerusercontent.com/images/y7135TGP0TiQ7gtLbQ0IrWOzww.jpg");
+                background-size: auto 100%;
+            }
+            .profile-img {
+                width: 100px;
+                height: 100px;
+                margin: 10px 0;
+                border-radius: 50%;
+
+                background: url("./profile.png") no-repeat;
+                background-size: 100%;
+            }
+            .text-group > * {
+                display: flex;
+                justify-content: center;
+                margin: 10px 0;
+            }
+            h1 {
+                font-size: 0.8rem;
+                color: rgb(71, 70, 70);
+            }
+            p {
+                font-size: 0.6rem;
+                color: gray;
+            }
+            p:last-child {
+                font-size: 0.8rem;
+                color: rgb(71, 70, 70);
+                font-weight: 700;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="id-card">
+                <div class="logo"></div>
+                <div class="profile-img"></div>
+                <div class="text-group">
+                    <p>사원명</p>
+                    <h1>이지언</h1>
+                    <p>직무</p>
+                    <p>프론트엔드 개발자</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

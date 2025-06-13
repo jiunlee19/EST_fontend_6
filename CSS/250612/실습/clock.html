@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>시계</title>
+        <style>
+            @keyframes move-watch {
+                0% {
+                    transform: rotate(0deg);
+                }
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+            .container {
+                width: 300px;
+                height: 300px;
+                background-color: lavender;
+                border-radius: 50%;
+
+                position: relative;
+            }
+            .container div {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+
+                animation-name: move-watch;
+                transform-origin: center top;
+                animation-timing-function: linear;
+                animation-iteration-count: infinite;
+            }
+            .sec {
+                width: 10px;
+                height: 10%;
+                background-color: red;
+
+                animation-duration: 4s;
+            }
+            .min {
+                width: 10px;
+                height: 20%;
+                background-color: blue;
+
+                animation-duration: 8s;
+            }
+            .hour {
+                width: 10px;
+                height: 40%;
+                background-color: green;
+
+                animation-duration: 15s;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="sec"></div>
+            <div class="min"></div>
+            <div class="hour"></div>
+        </div>
+    </body>
+</html>

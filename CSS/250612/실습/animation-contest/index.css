@@ -1,0 +1,87 @@
+@font-face {
+    font-family: "DungGeunMo";
+    src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff")
+        format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+@keyframes wind-grass {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(3deg);
+    }
+    50% {
+        transform: rotate(-2deg);
+    }
+    75% {
+        transform: rotate(2deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+body {
+    width: 100vw;
+    height: 100vh;
+    /* overflow: hidden; */
+}
+.field {
+    width: 100%;
+    height: 100%;
+    background-color: darkgreen;
+    position: relative;
+}
+h2 {
+    font-family: "DungGeunMo", sans-serif;
+    color: white;
+    position: absolute;
+    z-index: 100;
+    top: 50px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.mole {
+    position: absolute;
+    z-index: 100;
+    width: 50px;
+    height: 100px;
+    background: #ac94e9;
+    background: linear-gradient(
+        rgba(172, 148, 233, 1) 0%,
+        rgba(238, 174, 202, 1) 100%
+    );
+    border-radius: 30px 30px 8px 8px;
+}
+.grass-group {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 1%;
+}
+.grass {
+    margin-top: -50px;
+    width: 3%;
+    height: 200px;
+    background: #1f985f;
+    background: linear-gradient(
+        rgba(237, 221, 83, 1) 0%,
+        rgba(87, 199, 133, 1) 50%,
+        #1f985f 100%
+    );
+    border-radius: 30px;
+    animation-name: wind-grass;
+    transition: background-color 0.2s;
+
+    transform: translateZ(0);
+    z-index: 0;
+
+    animation: wind-grass 2.5s infinite ease-in-out;
+    transform-origin: center bottom;
+}
+.grass:hover {
+    background: white;
+
+    z-index: 0;
+}

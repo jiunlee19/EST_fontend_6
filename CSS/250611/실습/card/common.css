@@ -1,0 +1,43 @@
+ul {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(288px, 1fr));
+    gap: 23px;
+}
+li > div {
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 2px 2px 8px 0px #0000001a;
+}
+li > div > div {
+    padding: 20px 16px 16px;
+}
+p {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+a {
+    margin-left: 6px;
+    text-decoration: underline;
+}
+
+/*미디어쿼리*/
+/* @media screen and (max-width: 1268px) {
+    ul {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 23px;
+    }
+}
+@media screen and (max-width: 768px) {
+    ul {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 23px;
+    }
+} */

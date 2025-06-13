@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            @keyframes licat {
+                to {
+                    background-position: right 0;
+                }
+            }
+            @keyframes cafe {
+                from {
+                    background-position: 0 0;
+                }
+                to {
+                    background-position: right 0;
+                }
+            }
+            .container div {
+                display: inline-block;
+            }
+            .licat {
+                height: 340px;
+                aspect-ratio: 168/200;
+
+                animation-name: licat;
+                animation-duration: 1s;
+                animation-timing-function: steps(6);
+                animation-iteration-count: infinite;
+
+                background-image: url("./README.webp");
+                background-size: auto 100%;
+                background-repeat: no-repeat;
+            }
+            .cafe {
+                height: 176px;
+                width: 113px;
+
+                animation-name: cafe;
+                animation-duration: 1s;
+                animation-timing-function: steps(33);
+                animation-iteration-count: infinite;
+
+                background-image: url("./building1.png");
+                background-size: auto 100%;
+                background-repeat: no-repeat;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="licat"></div>
+            <div class="cafe"></div>
+        </div>
+    </body>
+</html>
