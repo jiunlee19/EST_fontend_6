@@ -205,12 +205,12 @@ ul label {
 }
 @keyframes sunglass {
     100% {
-        transform: translateY(120vh);
+        transform: translateY(110vh);
     }
 }
 @keyframes flower-necklace {
     100% {
-        transform: translateY(130vh);
+        transform: translateY(120vh);
     }
 }
 li {
