@@ -1,0 +1,249 @@
+@font-face {
+    font-family: "BagelFatOne";
+    src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_JAMO@1.0/BagelFatOne-Regular.woff2")
+        format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+.container {
+    height: 100%;
+
+    background-position: center;
+    background-size: cover;
+    background-image: url("./img/ali-abdul-rahman-Xva-TYqwHhA-unsplash.jpg");
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes floating {
+    0% {
+        transform: translate(0, -20px);
+    }
+    50% {
+        transform: translate(0, +20px);
+    }
+    100% {
+        transform: translate(0, -20px);
+    }
+}
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.start-saying {
+    font-family: "BagelFatOne";
+    color: white;
+    font-size: 2rem;
+
+    margin-bottom: 90px;
+    animation: floating 2s ease-in-out 5, fadeOut 2s ease-in-out infinite;
+    transform: translate(0, 5%);
+}
+
+.bear {
+    cursor: grab;
+    position: relative;
+    width: 500px;
+    height: 438px;
+    border: solid 1px rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(2px);
+
+    animation: floating 2s ease-in-out infinite;
+    transform: translate(0, 5%);
+}
+.bear > *,
+.eye::after {
+    transition: 1s all;
+}
+.bear:hover,
+.bear:hover .ear {
+    animation-play-state: paused;
+}
+.bear:hover .eye {
+    transform: scale(1.5);
+}
+.bear:hover .eye::after {
+    width: 15px;
+    height: 15px;
+}
+
+@keyframes left-ear-move {
+    50% {
+        transform: translate(25px, -25px) scale(1.1);
+    }
+}
+@keyframes right-ear-move {
+    50% {
+        transform: translate(-75px, -25px) scale(1.1);
+    }
+}
+.ear {
+    position: absolute;
+    width: 155px;
+    height: 155px;
+    border: solid 1px rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(2px);
+    isolation: isolate;
+    top: -33px;
+}
+.ear.left {
+    left: 0;
+    animation: left-ear-move 2s ease-in-out infinite;
+}
+.ear.right {
+    right: -30px;
+    transform: translateX(-43px);
+    animation: right-ear-move 2s ease-in-out infinite;
+}
+.hat {
+    position: absolute;
+    width: 512px;
+    aspect-ratio: 506/154;
+    background-image: url(./img/beach-hat.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: -5px;
+}
+.eye {
+    position: absolute;
+    width: 30px;
+    height: 40px;
+    border: solid 1px rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(1px);
+    /* box-shadow: inset -4px -4px 10px rgba(0, 0, 0, 0.25); */
+
+    top: 210px;
+}
+.eye::after {
+    content: "";
+    width: 0px;
+    height: 0px;
+    background-color: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+.eye.left {
+    left: 150px;
+    transform: rotate(45deg);
+}
+.eye.right {
+    right: 150px;
+    transform: rotate(-45deg);
+}
+.nose {
+    position: absolute;
+    width: 25px;
+    height: 20px;
+    border: solid 1px rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(1px);
+    /* box-shadow: inset -4px -4px 10px rgba(0, 0, 0, 0.25); */
+    top: 241px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.container > ul {
+    display: flex;
+    flex: row;
+    margin-top: 90px;
+    gap: 10px;
+}
+
+ul input:checked + label {
+    background-color: rgba(247, 87, 197, 1);
+}
+
+ul label {
+    font-family: "BagelFatOne";
+    color: white;
+
+    border: solid 1px rgba(247, 87, 197, 0.3);
+    background-color: rgba(247, 87, 197, 0.2);
+    backdrop-filter: blur(1px);
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+
+@keyframes coconutNcherry {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(120vh) rotate(360deg);
+    }
+}
+@keyframes flower-necklace {
+    100% {
+        transform: translateY(500%);
+    }
+}
+li {
+    position: relative;
+}
+ul img {
+    position: absolute;
+}
+ul li:first-child img {
+    width: 200px;
+    top: -100vh;
+    left: -300px;
+}
+ul li:nth-child(2) img {
+    width: 490px;
+    top: -76vh;
+    left: -150px;
+}
+ul li:nth-child(3) img {
+    width: 200px;
+    top: -100vh;
+    right: -300px;
+}
+ul li:last-child img {
+    width: 590px;
+    top: -100vh;
+    left: -380px;
+}
+
+#coconut:checked + label + img {
+    animation: coconutNcherry 1s ease-out infinite;
+}
+#sunglass:checked + label + img {
+    animation: flower-necklace 1s ease-out 1 forwards;
+}
+#cherry:checked + label + img {
+    animation: coconutNcherry 1s ease-out infinite;
+}
+#flower-necklace:checked + label + img {
+    animation: flower-necklace 1s ease-out 1 forwards;
+}

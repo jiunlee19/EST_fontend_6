@@ -1,0 +1,241 @@
+@font-face {
+    font-family: "SpoqaHanSansNeo";
+    src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SpoqaHanSansNeo-Regular.woff")
+        format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+}
+@media screen and (min-width: 1920px) {
+    section {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 240px;
+    }
+    .text-group {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin-right: 192px;
+    }
+    .text-group h2 {
+        font-family: "SpoqaHanSansNeo";
+        font-size: 70px;
+        font-weight: 400;
+    }
+    .text-group h2 span {
+        font-family: "SpoqaHanSansNeo";
+        font-size: 70px;
+        font-weight: 700;
+    }
+    .text-group p {
+        font-family: "SpoqaHanSansNeo";
+        font-size: 20px;
+        font-weight: 400;
+        margin-top: 20px;
+    }
+    .text-group p span {
+        font-weight: 700;
+    }
+
+    .img {
+        color: white;
+        width: 486px;
+        height: 280px;
+        border-radius: 20px;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        position: relative;
+    }
+    .img:first-child {
+        background-image: url("./img/img1.png");
+        margin-bottom: 20px;
+    }
+    .img:last-child {
+        background-image: url("./img/img2.png");
+    }
+
+    .img-info {
+        position: absolute;
+        font-family: "SpoqaHanSansNeo", sans-serif;
+        font-size: 30px;
+        font-weight: 700;
+        left: 40px;
+        top: 40px;
+    }
+    .img a {
+        position: absolute;
+        font-family: "SpoqaHanSansNeo", sans-serif;
+        font-size: 1rem;
+        font-weight: 400;
+        right: 30px;
+        bottom: 30px;
+        text-decoration: none;
+        color: white;
+    }
+}
+
+@media (max-width: 1919px) and (min-width: 768px) {
+    section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+        padding: 100px 30px;
+    }
+    .text-group {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .text-group h2 {
+        font-family: "SpoqaHanSansNeo";
+        font-size: 4.375rem;
+        font-weight: 400;
+    }
+    .text-group h2 span {
+        font-family: "SpoqaHanSansNeo";
+        font-size: 4.375rem;
+        font-weight: 700;
+    }
+    .text-group p {
+        font-family: "SpoqaHanSansNeo";
+        font-size: 1.125rem;
+        font-weight: 400;
+        margin-top: 20px;
+    }
+    .text-group p span {
+        font-weight: 700;
+    }
+    .img-group {
+        margin-top: 60px;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+
+    .img {
+        padding: 30px 20px 20px 30px;
+        color: white;
+        width: 50%;
+        min-width: 344px;
+        aspect-ratio: 344/198;
+        /* height: 198px; */
+        border-radius: 20px;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        position: relative;
+    }
+    .img:first-child {
+        background-image: url("./img/img1.png");
+        margin-right: 20px;
+    }
+    .img:last-child {
+        background-image: url("./img/img2.png");
+    }
+
+    .img-info {
+        position: absolute;
+        font-family: "SpoqaHanSansNeo", sans-serif;
+        font-size: 1.5rem;
+        font-weight: 700;
+        left: 40px;
+        top: 40px;
+    }
+    .img a {
+        position: absolute;
+        font-family: "SpoqaHanSansNeo", sans-serif;
+        font-size: 1rem;
+        font-weight: 400;
+        right: 30px;
+        bottom: 30px;
+        text-decoration: none;
+        color: white;
+    }
+}
+@media (max-width: 767px) and (min-width: 390px) {
+    .container {
+        margin: 0 auto;
+    }
+    section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 100px 18px 0 16px;
+
+        box-sizing: border-box;
+    }
+    .text-group {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .text-group h2 {
+        font-family: "SpoqaHanSansNeo";
+        font-size: 4.375rem;
+        font-weight: 400;
+    }
+    .text-group h2 span {
+        font-family: "SpoqaHanSansNeo";
+        font-size: 4.375rem;
+        font-weight: 700;
+    }
+    .text-group p {
+        font-family: "SpoqaHanSansNeo";
+        font-size: 1.125rem;
+        font-weight: 400;
+        margin-top: 20px;
+    }
+    .text-group p span {
+        font-weight: 700;
+    }
+    .img-group {
+        width: 100%;
+        margin-top: 40px;
+    }
+    .img {
+        padding: 30px 20px 20px 30px;
+        color: white;
+        min-width: 356px;
+        aspect-ratio: 356/205;
+        /* height: 198px; */
+        border-radius: 20px;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        position: relative;
+    }
+    .img:first-child {
+        background-image: url("./img/img1.png");
+        margin-bottom: 14px;
+    }
+    .img:last-child {
+        background-image: url("./img/img2.png");
+    }
+
+    .img-info {
+        position: absolute;
+        font-family: "SpoqaHanSansNeo", sans-serif;
+        font-size: 1.5rem;
+        font-weight: 700;
+        left: 40px;
+        top: 40px;
+    }
+    .img a {
+        position: absolute;
+        font-family: "SpoqaHanSansNeo", sans-serif;
+        font-size: 1rem;
+        font-weight: 400;
+        right: 30px;
+        bottom: 30px;
+        text-decoration: none;
+        color: white;
+    }
+}
