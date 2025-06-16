@@ -205,7 +205,7 @@ ul label {
 }
 @keyframes sunglass {
     100% {
-        transform: translateY(125vh);
+        transform: translateY(120vh);
     }
 }
 @keyframes flower-necklace {
