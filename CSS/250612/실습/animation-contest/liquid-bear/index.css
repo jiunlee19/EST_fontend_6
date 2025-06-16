@@ -200,12 +200,17 @@ ul label {
         transform: translateY(0px) rotate(0deg);
     }
     100% {
-        transform: translateY(120vh) rotate(360deg);
+        transform: translateY(200vh) rotate(360deg);
+    }
+}
+@keyframes sunglass {
+    100% {
+        transform: translateY(125vh);
     }
 }
 @keyframes flower-necklace {
     100% {
-        transform: translateY(500%);
+        transform: translateY(130vh);
     }
 }
 li {
@@ -216,22 +221,22 @@ ul img {
 }
 ul li:first-child img {
     width: 200px;
-    top: -100vh;
+    top: -150vh;
     left: -300px;
 }
 ul li:nth-child(2) img {
     width: 490px;
-    top: -76vh;
+    top: -150vh;
     left: -150px;
 }
 ul li:nth-child(3) img {
     width: 200px;
-    top: -100vh;
+    top: -150vh;
     right: -300px;
 }
 ul li:last-child img {
     width: 590px;
-    top: -100vh;
+    top: -150vh;
     left: -380px;
 }
 
@@ -239,7 +244,7 @@ ul li:last-child img {
     animation: coconutNcherry 1s ease-out infinite;
 }
 #sunglass:checked + label + img {
-    animation: flower-necklace 1s ease-out 1 forwards;
+    animation: sunglass 1s ease-out 1 forwards;
 }
 #cherry:checked + label + img {
     animation: coconutNcherry 1s ease-out infinite;
