@@ -1,0 +1,34 @@
+body {
+    width: 100vw;
+    height: 100vh;
+}
+header {
+    padding: 0 148px;
+    margin-bottom: -120px;
+}
+h1 img {
+    width: 9.25rem;
+    height: 2.5rem;
+}
+.header-right {
+    display: flex;
+    gap: 12px;
+}
+.lang-btn {
+    display: flex;
+    align-items: center;
+    border: solid 1px black;
+    border-radius: 0.5rem;
+    background-color: white;
+    padding: 6px 16px 6px 18px;
+}
+.lang-btn select {
+    border: 0;
+}
+header button {
+    background-color: rgb(229, 9, 20);
+}
+
+main {
+    width: 100%;
+}
