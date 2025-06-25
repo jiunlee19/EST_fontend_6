@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="baseFont" placeholder="base px">
+    <input type="number" id="targetFont" placeholder="target px">
+    <!-- <input type="number" id="targetPx" placeholder="target px"> -->
+    <button type="button" onclick="pxToEm();">EM계산하기</button>
+    <p id="result"></p>
+
+    <script>
+        const input1 = document.getElementById('baseFont');
+        const input2 = document.getElementById('targetFont');
+
+        const result = document.getElementById('result');
+        
+        function pxToEm(){
+            const baseFont = input1.value;
+            const targetFont = input2.value;
+
+            const emFont= targetFont/baseFont;
+            result.textContent = `${targetFont}px -> ${emFont}em`;
+        }
+
+    </script>
+</body>
+</html>
