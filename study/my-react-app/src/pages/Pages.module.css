@@ -1,0 +1,13 @@
+.page-height {
+  height: 100vh;
+  padding: 3rem 0;
+}
+
+main {
+  height: 100vh;
+  overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}/*# sourceMappingURL=Pages.module.css.map */
