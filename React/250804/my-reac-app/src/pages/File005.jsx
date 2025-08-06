@@ -1,11 +1,23 @@
 import "../css/File005.css";
+import { useState } from "react";
+import { SyncLoader } from "react-spinners";
 
 function Profile({ item }) {
+    const [loading, setLoading] = useState(true);
+    const imageUrl = `https://picsum.photos/200/200`;
+
     return (
         <div className="profile">
+            {loading && (
+                <div>
+                    <h3>로딩 중</h3>
+                    <SyncLoader color="skyblue" />
+                </div>
+            )}
             <img
-                src={`https://picsum.photos/200/200?random=${item.id}`}
+                src={imageUrl + `?random=${item.id}`}
                 alt={item.name}
+                onLoad={() => setLoading(false)}
             />
 
             <div className="title">
