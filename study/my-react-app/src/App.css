@@ -15,5 +15,7 @@
     .App {
         display: flex;
         flex-direction: column;
+        overflow-y: scroll;
+        max-height: fit-content;
     }
 }

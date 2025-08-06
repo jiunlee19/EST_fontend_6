@@ -4,6 +4,7 @@ header {
   position: sticky;
   top: 0;
   left: 0;
+  padding: 3rem 0;
 }
 
 h1 a {
@@ -31,4 +32,9 @@ ul li a {
   display: flex;
   flex-direction: row;
   gap: 20px;
+}
+
+img {
+  width: 24px;
+  height: 24px;
 }/*# sourceMappingURL=NavBar.module.css.map */

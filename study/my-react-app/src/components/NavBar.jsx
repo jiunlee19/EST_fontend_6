@@ -1,4 +1,8 @@
 import styles from "./NavBar.module.scss";
+import gitIcon from "../assets/github.png";
+import linkedInIcon from "../assets/linkedin.png";
+import velogIcon from "../assets/velog.png";
+import data from "../data/infoSummary.json";
 
 const menus = ["About", "Resume", "Projects"];
 
@@ -17,10 +21,10 @@ function NavBar() {
         <header>
             <nav className="page-links">
                 <h1>
-                    <a href="#About">Ji Un Lee</a>
+                    <a href="#About">{data.name}</a>
                 </h1>
-                <h2>Frontend Engineer</h2>
-                <p>I build Web with semantic HTML and sufficient JS</p>
+                <h2>{data.position}</h2>
+                <p>{data.description}</p>
                 <ul>
                     {menus.map((menu, index) => {
                         return <MenuComponent key={index} menu={menu} />;
@@ -29,9 +33,21 @@ function NavBar() {
             </nav>
             <nav>
                 <ul className={styles["social-links"]}>
-                    <li>Github</li>
-                    <li>Velog</li>
-                    <li>Linkedin</li>
+                    <li>
+                        <a href="#">
+                            <img src={gitIcon} alt="github" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src={linkedInIcon} alt="linkedin" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src={velogIcon} alt="velog" />
+                        </a>
+                    </li>
                 </ul>
             </nav>
         </header>
