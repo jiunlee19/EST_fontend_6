@@ -1,0 +1,90 @@
+.profile-list {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+.profile {
+    width: 400px;
+    padding: 30px;
+    margin: 10px;
+    border: 2px solid lightgray;
+    border-radius: 5px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+}
+img {
+    border: 10px solid skyblue;
+    border-radius: 50%;
+}
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+h2 {
+    color: rgb(0, 115, 255);
+}
+.level {
+    padding: 5px;
+    border-radius: 30px;
+    font-weight: 700;
+    background-color: lightblue;
+}
+.level::before {
+    content: "";
+    display: inline-block;
+    width: 0.6rem;
+    height: 0.6rem;
+    margin-right: 10px;
+    border-radius: 50%;
+    background-color: gray;
+}
+.level.legend::before {
+    content: "";
+    display: inline-block;
+    width: 0.6rem;
+    height: 0.6rem;
+    margin-right: 10px;
+    border-radius: 50%;
+    background-color: gold;
+}
+.level.hero::before {
+    content: "";
+    display: inline-block;
+    width: 0.6rem;
+    height: 0.6rem;
+    margin-right: 10px;
+    border-radius: 50%;
+    background-color: plum;
+}
+.level.advance::before {
+    content: "";
+    display: inline-block;
+    width: 0.6rem;
+    height: 0.6rem;
+    margin-right: 10px;
+    border-radius: 50%;
+    background-color: navy;
+}
+
+p {
+    display: flex;
+    justify-content: space-between;
+}
+
+p span:last-child {
+    font-weight: 700;
+}
+
+.current-max {
+    color: rgb(181, 13, 13);
+}
+.current-max.over50 {
+    color: rgb(87, 181, 75);
+}
+
+.element {
+    padding: 5px;
+    margin-right: 5px;
+    border-radius: 5px;
+    background-color: lightblue;
+}
