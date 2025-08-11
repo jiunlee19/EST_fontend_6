@@ -4,6 +4,8 @@ import linkedInIcon from "../assets/linkedin.png";
 import velogIcon from "../assets/velog.png";
 import data from "../data/infoSummary.json";
 
+import Theme from "./Theme";
+
 const menus = ["About", "Resume", "Projects"];
 
 function MenuComponent({ menu }) {
@@ -47,6 +49,9 @@ function NavBar() {
                         <a href="#">
                             <img src={velogIcon} alt="velog" />
                         </a>
+                    </li>
+                    <li>
+                        <Theme />
                     </li>
                 </ul>
             </nav>

@@ -1,0 +1,36 @@
+.toggle-wrapper {
+    width: 40px;
+    height: 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.4s ease; /* transition을 all로 변경해 테두리도 적용 */
+
+    /* 기본 상태 (toggle="false"일 때의 스타일을 여기에 배치) */
+    background-color: lightgray;
+    border: 1px solid dimgray;
+
+    .toggle-circle {
+        width: 14px;
+        height: 14px;
+        position: relative;
+        top: 2px;
+        border-radius: 50%;
+        transition: all 0.4s ease;
+
+        /* 기본 상태 (toggle="false"일 때의 스타일) */
+        background-color: dimgray;
+        left: 2px;
+    }
+
+    /* ⬇️ '켜짐' 상태일 때 덮어 쓸 스타일만 지정 ⬇️ */
+    &[toggle="true"] {
+        background-color: dimgray;
+        border: 1px solid transparent; /* 테두리를 투명하게 하여 크기 유지 */
+
+        .toggle-circle {
+            background-color: lightgray;
+            /* right가 아닌 left 값을 직접 변경 */
+            left: 22px; // 40px(전체 너비) - 14px(원 너비) - 3px(오른쪽 여백)
+        }
+    }
+}
