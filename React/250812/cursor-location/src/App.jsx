@@ -1,15 +1,18 @@
-// import { useMouseLocation } from "./Hooks/useMouseLocation";
 import { useScroll } from "./Hooks/useScroll";
+import { useCursorLocation } from "./Hooks/useCursorLocation";
+
 import { useScrollThrottle } from "./Hooks/useScrollThrottle";
 import { useScrollObserver } from "./Hooks/useScrollObserver";
 
 function App() {
-    // const mouseLocation = useMouseLocation({ x: 0, y: 0 });
+    // const scroll = useScroll();
+    // console.log(scroll);
+    const cursorLocation = useCursorLocation({ x: 0, y: 0 });
 
     // const isBottom = useScrollThrottle();
     // console.log("useScrollThrottle", useScrollThrottle());
-    const isBottom = useScrollObserver();
-    console.log("isBottom: ", isBottom);
+    // const isBottom = useScrollObserver();
+    // console.log("isBottom: ", isBottom);
 
     return (
         <div

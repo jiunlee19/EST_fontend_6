@@ -1,33 +1,22 @@
-import { useEffect, useState, useRef } from "react";
+import { useEffect } from "react";
+import { useState } from "react";
 
 export function useScroll() {
-    const [isBottom, setIsBottom] = useState(false);
-    // useRef를 사용하여 lastTime 변수가 리렌더링 시 초기화되지 않도록 합니다.
-    const lastTime = useRef(0);
-    const delay = 3000;
+    const [isBottom, setIsBottom] = useState();
 
     useEffect(() => {
-        const handleScroll = () => {
-            const currentTime = Date.now();
-            if (currentTime - lastTime.current >= delay) {
-                lastTime.current = currentTime;
+        window.addEventListener("scroll", () => {
+            // window.innerHeight > 뷰포트의 높이
+            // scrollTop > 타겟 요소가 화면 상단으로부터 스크롤된 길이
+            // documentElement > 문서의 루트 요소
+            // offsetHeight > 타겟 요소의 전체 높이
 
-                setIsBottom(
-                    window.innerHeight +
-                        document.documentElement.scrollTop +
-                        10 >=
-                        document.documentElement.offsetHeight
-                );
-                console.log("scrolling...");
-            }
-        };
-
-        window.addEventListener("scroll", handleScroll);
-
-        // cleanup 함수를 통해 컴포넌트가 언마운트될 때 이벤트 리스너를 제거합니다.
-        return () => {
-            window.removeEventListener("scroll", handleScroll);
-        };
+            setIsBottom(
+                window.innerHeight + document.documentElement.scrollTop + 10 >=
+                    document.documentElement.offsetHeight
+            );
+            console.log("scrolling...");
+        });
     }, []);
 
     return isBottom;
