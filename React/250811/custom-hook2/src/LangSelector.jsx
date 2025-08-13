@@ -1,17 +1,35 @@
-import { useLang } from "./Hook/UseLang.js";
+import useLang from "./Hook/useLang";
 
-function LangSelector() {
-    // Custom Hook을 통해 Context 값과 함수를 가져옴
-    const { currentLanguage, setLanguage } = useLang();
+export default function LangSelector() {
+    const { languageData, currentLanguage, changeLanguage } = useLang();
 
     return (
         <>
-            <div>{currentLanguage.languageSelector}</div>
-            <button onClick={() => setLanguage("en")}>English</button>
-            <button onClick={() => setLanguage("ko")}>한국어</button>
-            <button onClick={() => setLanguage("ja")}>日本語</button>
+            <h2>{languageData.languageSelector}</h2>
+            <button
+                onClick={() => {
+                    changeLanguage("en");
+                }}
+                disabled={currentLanguage === "en"}
+            >
+                English
+            </button>
+            <button
+                onClick={() => {
+                    changeLanguage("ko");
+                }}
+                disabled={currentLanguage === "ko"}
+            >
+                한국어
+            </button>
+            <button
+                onClick={() => {
+                    changeLanguage("ja");
+                }}
+                disabled={currentLanguage === "ja"}
+            >
+                日本語
+            </button>
         </>
     );
 }
-
-export default LangSelector;

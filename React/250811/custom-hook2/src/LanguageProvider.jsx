@@ -1,9 +1,5 @@
-import { createContext, useState } from "react";
+import { createContext, useContext, useState } from "react";
 
-// Context 생성
-export const LanguageContext = createContext();
-
-// 다국어 텍스트 데이터
 const languages = {
     en: {
         title: "Multi-language App",
@@ -25,17 +21,21 @@ const languages = {
     },
 };
 
-// Provider 컴포넌트
-export function LanguageProvider({ children }) {
-    const [language, setLanguage] = useState("ko");
-    const currentLanguage = languages[language];
+const LanguageContext = createContext();
 
-    // Context가 제공할 value
-    const value = { currentLanguage, language, setLanguage };
+function LanguageProvider({ children }) {
+    const [languageState, setLanguageState] = useState("ko");
 
+    const changeLanguage = (lang) => {
+        setLanguageState(lang);
+    };
     return (
-        <LanguageContext.Provider value={value}>
+        <LanguageContext.Provider
+            value={{ languageState, changeLanguage, languages }}
+        >
             {children}
         </LanguageContext.Provider>
     );
 }
+
+export { LanguageProvider, LanguageContext };

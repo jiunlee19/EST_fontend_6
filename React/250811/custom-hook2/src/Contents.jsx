@@ -1,16 +1,12 @@
-import { useLang } from "./Hook/UseLang.js";
+import useLang from "./Hook/useLang";
 
-function Contents() {
-    // Custom Hook을 통해 현재 언어의 텍스트를 가져옴
-    const { currentLanguage } = useLang();
-
+export default function Contents() {
+    const { languageData } = useLang();
     return (
-        <div>
-            <h2>{currentLanguage.title}</h2>
-            <p>{currentLanguage.greeting}</p>
-            <p>{currentLanguage.description}</p>
-        </div>
+        <>
+            <h3>{languageData.title}</h3>
+            <p>{languageData.greeting}</p>
+            <p>{languageData.description}</p>
+        </>
     );
 }
-
-export default Contents;

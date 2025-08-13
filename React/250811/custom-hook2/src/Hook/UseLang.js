@@ -1,14 +1,14 @@
 import { useContext } from "react";
 import { LanguageContext } from "../LanguageProvider";
 
-// Custom Hook: useLang
-export const useLang = () => {
+const useLang = () => {
     const context = useContext(LanguageContext);
 
-    // Provider 범위 밖에서 사용 시 에러 발생
-    if (context === undefined) {
-        throw new Error("useLang must be used within a LanguageProvider");
-    }
-
-    return context;
+    return {
+        languageData: context.languages[context.languageState],
+        currentLanguage: context.languageState,
+        changeLanguage: context.changeLanguage,
+    };
 };
+
+export default useLang;
