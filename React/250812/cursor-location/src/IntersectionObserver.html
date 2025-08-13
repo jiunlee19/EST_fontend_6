@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Intersection Observer</title>
+</head>
+
+<body>
+  <script>
+    const option = {
+      root: null, // 뷰 포트 root 기준
+      threshold: 0, // 타겟 요소가 얼마나 겹칠 때 작동할지 설정
+    }
+
+    const callback = (entries) => {
+      entries.forEach((entry) => {
+        //실제 개발할 때 여기에 원하는 동작 코드
+        console.log(entry);
+      })
+    }
+
+    const observer = new IntersectionObserver(callback, option);
+
+    //관찰할 요소 저장
+    observer.observe(target);
+
+    // 타겟 관찰 종료
+    observer.unobserve(target);
+
+    // 모든 요소에 대한 observe 중지
+    observe.disconnect();
+  </script>
+</body>
+
+</html>
