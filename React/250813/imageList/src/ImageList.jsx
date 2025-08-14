@@ -21,6 +21,7 @@ export default function ImageList() {
             }
             const data = await response.json();
             setImages((prev) => [...prev, ...data]);
+            console.log("data 정상적으로 불러왔습니다.");
         } catch (error) {
             console.error("이미지를 불러오는 중 에러가 발생했습니다.", error);
         } finally {
