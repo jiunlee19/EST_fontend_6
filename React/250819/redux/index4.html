@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redux Airbnb 다중 필터링</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/redux/4.0.1/redux.js"></script>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background-color: #f7f7f7;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1,
+    h2 {
+      border-bottom: 1px solid #eee;
+      padding-bottom: 10px;
+    }
+
+    .filters ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .filters button {
+      border: 1px solid #ddd;
+      background-color: #fff;
+      padding: 8px 15px;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .filters button:hover {
+      background-color: #f0f0f0;
+    }
+
+    .filters button.active {
+      background-color: #ff5a5f;
+      color: white;
+      border-color: #ff5a5f;
+      font-weight: bold;
+    }
+
+    .filter-status {
+      margin-top: 15px;
+      padding: 10px;
+      background-color: #e8f5e9;
+      border-left: 4px solid #4caf50;
+      color: #2e7d32;
+    }
+
+    .listing-grid {
+
+      padding: 0;
+      margin-top: 20px;
+      display: grid;
+      gap: 20px;
+    }
+
+    .listing-card {
+      list-style: none;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+    }
+
+    .listing-card h3 {
+      margin: 0 0 5px 0;
+    }
+
+    .listing-card .price {
+      margin: 0 0 15px 0;
+      color: #555;
+    }
+
+    .listing-card .amenities strong {
+      font-weight: 500;
+    }
+
+    .listing-card .tags {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 5px;
+    }
+
+    .listing-card .tags li {
+      background-color: #eee;
+      padding: 4px 10px;
+      border-radius: 12px;
+      font-size: 14px;
+    }
+
+    .listing-card .tags li.active {
+      background-color: #fce4ec;
+      color: #c2185b;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="container">
+    <h1>Redux Airbnb 필터링 (다중 선택)</h1>
+    <section class="filters">
+      <h2>편의시설 필터:</h2>
+      <ul id="filter-list"></ul>
+      <p id="filter-status"></p>
+    </section>
+    <section class="listings">
+      <ul id="listing-grid"></ul>
+    </section>
+  </main>
+
+  <script>
+    // ========= 데이터 =========
+    const allAccommodations = [
+      {id: 1, name: '도심 아파트 - 강남구', price: '85,000원', amenities: ['무료 주차 공간', '주방', 'TV']},
+      {id: 2, name: '럭셔리 펜트하우스 - 한남동', price: '250,000원', amenities: ['대형 욕조', '수영장', '게스트용 별채', '주방', 'TV']},
+      {id: 3, name: '산속 별장 - 평창', price: '95,000원', amenities: ['바베큐 그릴', '게스트용 별채', '무료 주차 공간', 'TV']},
+      {id: 4, name: '해변가 오두막 - 제주', price: '120,000원', amenities: ['바베큐 그릴', '주방']},
+      {id: 5, name: '모던 스튜디오 - 홍대', price: '70,000원', amenities: ['주방', 'TV']},
+    ];
+    const allAmenities = ['무료 주차 공간', '대형 욕조', '바베큐 그릴', '게스트용 별채', '수영장', '주방', 'TV'];
+
+    // ========= Redux 파트 =========
+    // ✅ 1. Reducer 수정
+    function reducer(state, action) {
+      if (state === undefined) {
+        return {
+          activeFilters: [], // 초기값은 빈 배열
+          accommodations: allAccommodations
+        };
+      }
+
+      if (action.type === 'TOGGLE_FILTER') {
+        const currentFilters = state.activeFilters;
+        const newFilter = action.filter;
+
+        const newFilters = currentFilters.includes(newFilter)
+          ? currentFilters.filter(filter => filter !== newFilter) // 있으면 제거
+          : [...currentFilters, newFilter]; // 없으면 추가
+
+        return {...state, activeFilters: newFilters};
+      }
+
+      return state;
+    }
+
+    const store = Redux.createStore(reducer);
+
+    // ✅ 2. Render 함수 수정
+    function render() {
+      const state = store.getState();
+
+      const filterList = document.getElementById('filter-list');
+      const filterStatus = document.getElementById('filter-status');
+      const listingGrid = document.getElementById('listing-grid');
+
+      // --- 필터 버튼 렌더링 (active 조건 변경) ---
+      let filterHTML = '';
+      allAmenities.forEach(amenity => {
+        const isActive = state.activeFilters.includes(amenity) ? 'active' : '';
+        filterHTML += `
+                    <li><button type="button" class="${isActive}" onclick="store.dispatch({type: 'TOGGLE_FILTER', filter: '${amenity}'})">${amenity}</button></li>`;
+      });
+      filterList.innerHTML = filterHTML;
+
+      // --- 필터링된 숙소 목록 계산 (로직 변경) ---
+      const filteredAccommodations = state.activeFilters.length > 0
+        ? state.accommodations.filter(item =>
+          // item.amenities가 activeFilters의 모든 요소를 포함하는지 확인
+          state.activeFilters.every(filter => item.amenities.includes(filter))
+        )
+        : state.accommodations;
+
+      // --- 상태 표시줄 렌더링 (표시 방식 변경) ---
+      const activeFilterText = state.activeFilters.length > 0 ? state.activeFilters.join(', ') : '없음';
+      filterStatus.innerText = `활성 필터: ${activeFilterText} | 결과: ${filteredAccommodations.length}개 숙소`;
+
+      // --- 숙소 카드 렌더링 (active 조건 변경) ---
+      let listingsHTML = '';
+      if (filteredAccommodations.length === 0) {
+        listingsHTML = '<p>해당 편의시설을 모두 갖춘 숙소가 없습니다.</p>';
+      } else {
+        filteredAccommodations.forEach(item => {
+          listingsHTML += `
+                        <li class="listing-card">
+                            <article>
+                                <header><h3>${item.name}</h3><p class="price">가격: ${item.price}</p></header>
+                                <div class="amenities"><strong>편의시설:</strong>
+                                    <ul class="tags">
+                                        ${item.amenities.map(amenity => `
+                                            <li class="${state.activeFilters.includes(amenity) ? 'active' : ''}">${amenity}</li>
+                                        `).join('')}
+                                    </ul>
+                                </div>
+                            </article>
+                        </li>`;
+        });
+      }
+      listingGrid.innerHTML = listingsHTML;
+    }
+
+    store.subscribe(render);
+    render();
+  </script>
+</body>
+
+</html>
