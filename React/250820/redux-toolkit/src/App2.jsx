@@ -1,22 +1,22 @@
-// src/App.jsx
+// src/App.jsx - RTK 버전
 import { useSelector, useDispatch } from "react-redux";
 import { increment, decrement } from "./store";
 
 function App() {
-    // Redux Store에서 상태 가져오기
-    const { count, unitPrice, totalPrice } = useSelector((state) => state);
+    // RTK에서는 state.counter로 접근 (slice 이름)
+    const { count, unitPrice, totalPrice } = useSelector(
+        (state) => state.counter
+    );
 
-    // 액션 디스패치 함수
     const dispatch = useDispatch();
 
-    // 이벤트 핸들러
     const handleIncrement = () => {
-        console.log(" + INCREMENT 액션 디스패치");
+        console.log("+ INCREMENT 액션 디스패치");
         dispatch(increment());
     };
 
     const handleDecrement = () => {
-        console.log(" - DECREMENT 액션 디스패치");
+        console.log("- DECREMENT 액션 디스패치");
         dispatch(decrement());
     };
 
