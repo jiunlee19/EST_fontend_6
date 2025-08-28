@@ -24,6 +24,7 @@ export default function cartReducer(state = initialState, action) {
             if (exists) return state;
 
             return { ...state, items: [...state.items, action.payload] };
+            ㄷ;
         }
         case REMOVE_FROM_CART:
             return {

@@ -26,6 +26,9 @@ type UserDetails = {
 };
 
 function processUser(user: User): UserDetails {
+    console.log("displayName:", user.firstName + " " + user.lastName);
+    console.log("age: ", user.age);
+    console.log("isAdmin: ", user.role === "admin");
     return {
         displayName: user.firstName + " " + user.lastName,
         age: user.age,

@@ -65,5 +65,7 @@ function calculateArea(shape: Shape): number {
         return shape[size] ** 2;
     } else if (shape instanceof Rectangle) {
         return shape[width] * shape[height];
+    } else {
+      return shape[radius] * 
     }
 }
