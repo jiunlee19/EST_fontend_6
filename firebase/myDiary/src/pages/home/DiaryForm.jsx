@@ -1,11 +1,11 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styles from "./Home.module.css";
 import { useFirestore } from "../../hooks/useFirestore";
 
 export default function DiaryForm({ uid }) {
     const [diaryTitle, setDiaryTitle] = useState("");
     const [diaryContent, setDiaryContent] = useState("");
-    const { addDocument } = useFirestore("diary");
+    const { addDocument, response } = useFirestore("diary");
     // transaction = 'diary' = 컬렉션 이름
 
     const handleData = (event) => {
@@ -19,9 +19,14 @@ export default function DiaryForm({ uid }) {
         event.preventDefault();
         addDocument({ diaryTitle, diaryContent, uid });
         // login한 유저의 uid도 같이 저장해야 한다.
-        setDiaryTitle("");
-        setDiaryContent("");
     };
+
+    useEffect(() => {
+        if (response.success) {
+            setDiaryTitle("");
+            setDiaryContent("");
+        }
+    }, [response.success]);
 
     return (
         <form onSubmit={handleSubmit}>
