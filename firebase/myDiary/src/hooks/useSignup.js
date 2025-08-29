@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { appAuth } from "../firebase/config";
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
-import useAuthContext from "./useAuthContext";
+import { useAuthContext } from "./useAuthContext";
 
 export const useSignup = () => {
     // 에러 정보를 저장합니다.
@@ -29,10 +29,8 @@ export const useSignup = () => {
                 // 회원가입이 완료되고 유저 정보에 닉네임을 업데이트합니다. import 받아야합니다.
                 updateProfile(appAuth.currentUser, { displayName })
                     .then(() => {
-                        // action으로 전달될 인자를 작성합니다.
                         dispatch({ type: "login", payload: user });
                         setError(null);
-                        user;
                         setIsPending(false);
                     })
                     .catch((err) => {
