@@ -16,18 +16,24 @@ export default function Home() {
         day
     ).padStart(2, 0)}`;
 
-    const { documents, error } = useCollection("diary");
+    const { documents, error } = useCollection("diary", [
+        "uid",
+        "==",
+        user.uid,
+    ]);
+    console.log(documents); // documents 값 확인
 
     return (
-        <div className="container">
+        <div className={styles["container"]}>
             <main className={styles["diary-main"]}>
                 <h2 className={styles["heart"]}>{formattedDate}의 비밀일기</h2>
                 <DiaryForm uid={user.uid} />
             </main>
             <section>
                 <h2 className="a11y-hidden">일기 목록</h2>
-                <ul className={styles.content_list}>
-                    <DiaryList list={documents} />
+                <ul className={styles["content_list"]}>
+                    {error && <strong>{error}</strong>}
+                    {documents && <DiaryList documents={documents} />}
                 </ul>
             </section>
         </div>

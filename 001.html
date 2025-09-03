@@ -1,48 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
-        <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT"
-            crossorigin="anonymous"
-        />
-    </head>
-    <body>
-        <h6>
-            작은 라벨 컴포넌트 <span class="badge text-bg-secondary">뱃지</span>
-        </h6>
 
-        <hr />
-        <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item active" aria-current="page">Home</li>
-            </ol>
-        </nav>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        article {
+            display: inline-block;
+            border: 3px solid black;
+            border-radius: 10px;
+            padding: 10px;
+        }
 
-        <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="#">Home</a></li>
-                <li class="breadcrumb-item active" aria-current="page">
-                    Library
-                </li>
-            </ol>
-        </nav>
+        .viewer {
+            display: block;
+            font-size: 24px;
+            color: green;
+            margin: 50px 0 50px;
+            text-align: center;
+        }
+    </style>
+</head>
 
-        <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="#">Home</a></li>
-                <li class="breadcrumb-item"><a href="#">Library</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Data</li>
-            </ol>
-        </nav>
-        <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
-            crossorigin="anonymous"
-        ></script>
-    </body>
+<body>
+    <article>
+        <strong class="viewer"></strong>
+        <input type="text" class="inp-txt">
+        <button class="btn-push">적용</button>
+    </article>
+
+
+    <script src="TextManager.js"></script>
+    <script src="ViewManager.js"></script>
+    <script>
+        (() => {
+            const textManager = new TextManager();
+
+            const strong = document.querySelector('.viewer');
+            const input = document.querySelector('.inp-txt');
+            const button = document.querySelector('.btn-push');
+
+            const viewManager = new ViewManager(textManager, {strong, input, button});
+
+            viewManager.updateView();
+        })()
+
+    </script>
+</body>
+
 </html>

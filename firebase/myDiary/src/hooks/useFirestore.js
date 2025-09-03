@@ -1,6 +1,12 @@
 import { useReducer } from "react";
 import { appFireStore } from "../firebase/config";
-import { addDoc, collection, Timestamp } from "firebase/firestore";
+import {
+    addDoc,
+    collection,
+    Timestamp,
+    deleteDoc,
+    doc,
+} from "firebase/firestore";
 // Timestamp config에 작성해서 import해서 쓰는게 맞지만,
 // 이미 addDoc, collection을 직접 불러오고 있고,
 // useFirestore에서만 쓰이기 때문에 여기서 불러오겠습니다.
@@ -42,6 +48,13 @@ const storeReducer = (state, action) => {
                 error: null,
                 success: false,
             };
+        case "deleteDoc":
+            return {
+                isPending: false,
+                document: null,
+                success: true,
+                error: null,
+            };
         default:
             return state;
     }
@@ -73,7 +86,15 @@ export const useFirestore = (transaction) => {
     };
 
     // 컬렉션에서 문서를 제거합니다.
-    const deleteDocument = (id) => {};
+    const deleteDocument = async (id) => {
+        dispatch({ type: "isPending" });
+        try {
+            await deleteDoc(doc(colRef, id));
+            dispatch({ type: "deleteDoc" });
+        } catch (e) {
+            dispatch({ type: "error", payload: e.message });
+        }
+    };
 
     // 컬렉션에서 문서를 수정합니다.
     const editDocument = () => {};
